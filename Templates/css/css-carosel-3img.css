@@ -1,0 +1,33 @@
+.card-img-top{
+    width: 100%;
+  }
+    .carousel{
+      width: 80%;
+      text-align: center;
+      justify-content: center;
+      margin-left: 10%;
+      margin-top: 5%;
+    }
+    .cards-wrapper{
+       
+       display: flex;
+      justify-content: center;
+    }
+    .card{
+      margin: 0 .5em;
+     width: 100%;
+
+    }
+    
+    .image-wrapper {
+      height: 22vw;
+      display: flex;
+
+      align-items: center;;
+      justify-content: center;;
+    }
+
+    .image-wrapper img{
+      max-height: 100%;
+      max-width: 100%;
+    }
