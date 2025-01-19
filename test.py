@@ -1,7 +1,11 @@
-from flask import Flask
+import json, os, random
+from flask import Flask, request, render_template, redirect,send_from_directory
 
-app = Flask(__name__)
+template_dir = os.path.abspath('./Templates')
+app = Flask(__name__,template_folder=template_dir)
 
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
