@@ -1,8 +1,4 @@
-body{
-    background-color: aqua;
-}
-
-p{
+#testo{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 20px;
   text-align: center;
@@ -13,15 +9,15 @@ p{
 #cinema_vecchio{
   display: block;
   margin: 0 auto;
-  width: 1500px;  
+  width: 90%;  
   height: 620px;  
 }
-
+/*
 img {
   max-width: 100%; 
   height: auto; 
   display: block;
-}
+}*/
 
 @media (max-width: 768px) {
   #cinema_vecchio {
