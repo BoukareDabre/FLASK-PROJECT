@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cinemania</title>
+    <title>{% block title %}Cinemania{% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="css/css-carosel-interattivo.css">
-    <link rel="stylesheet" href="css/css-carosel-3img.css">
-    <link rel="stylesheet" href="css/mycss.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mycss.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/css-carosel-interattivo.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mycss.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/css-carosel-3img.css') }}">
+    
     
   </head>
   <body>
@@ -16,7 +18,7 @@
     <div class="navbar navbar-expand-sm bg-dark mb-5 border-bottom border-body"  data-bs-theme="dark" >
       <div class="container-fluid">
         <div class="navbar-brand" href="#">
-          <img src="IMG/LOGO.jpeg" alt="logo" width="90" height="90" >
+          <img src="{{ url_for('static', filename='img/LOGO.jpeg') }}" alt="logo" width="90" height="90" >
         </div>
         
         
@@ -29,7 +31,7 @@
               <a class="nav-link" href="pages/story_cinema.html">Storia</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pagine_in_corso.html">Luogo</a>
+              <a class="nav-link" href="pages/luogo_cinema.html">Luogo</a>
             </li>
           </ul>
         </div>
@@ -37,17 +39,18 @@
     </div>
 
 
+    {% block content %}
 
     <nav class="container mb-5" style="margin-bottom: 10px;">
       <div class="row justify-content-center">
           <div class="col-md-4 ">
-              <img src="IMG/IMG-INIZIO1.jpg" alt="Immagine 1" class="img img-stile" width="400" height="250">
+              <img src="../static/img/IMG-INIZIO1.jpg" alt="Immagine 1" class="img img-stile" width="400" height="250">
           </div>
           <div class="col-md-4 ">
-              <img src="IMG/IMG-INIZIO2.jpg" alt="Immagine 2" class="img img-stile" width="400" height="250">
+              <img src="../static/img/IMG-INIZIO2.jpg" alt="Immagine 2" class="img img-stile" width="400" height="250">
           </div>
           <div class="col-md-4 ">
-              <img src="IMG/IMG-INIZIO3.jpg" alt="Immagine 3" class="img img-stile" width="400" height="250">
+              <img src="../static/img/IMG-INIZIO3.jpg" alt="Immagine 3" class="img img-stile" width="400" height="250">
           </div>
       </div>
     </nav>
@@ -55,7 +58,7 @@
         <div class=" mt-5">
             <div class="container mb-1">
               <a class="navbar-brand" href="#">
-                <img src="img/icone/white-black/movie-theater_11908347.png" alt="Logo" width="25" height="25" class="d-inline-block align-text-top">
+                <img src="../static/img/icone/white-black/movie-theater_11908347.png" alt="Logo" width="25" height="25" class="d-inline-block align-text-top">
                 Programmazione
               </a>
             </div>
@@ -70,7 +73,7 @@
                   <div class="cards-wrapper ">
                     <div class="card  h-100 card_stile0" style="width: 18rem;">
                       
-                        <a href="film_page/prendi_il_volo.html"><img src="IMG/film/Prendi_il_volo.jpg" class="card-img-top" alt="Prendi_il_volo" width="150px" height="400px"></a>
+                        <a href="film_page/prendi_il_volo.html"><img src="../static/img/film/Prendi_il_volo.jpg" class="card-img-top" alt="Prendi_il_volo" width="150px" height="400px"></a>
                       
                       <div class="card-body" style="padding-bottom: 0%;">
                         <p class="card-text"><strong>PRENDI_IL_VOLO</strong><p></p>
@@ -79,7 +82,7 @@
             
                     <div class="card card_stile0" style="width: 18rem;">
                       
-                        <a href="film_page/wish.html"><img src="IMG/film/wish.jpeg" class="card-img-top" alt="wish" width="150px" height="400px"></a>
+                        <a href="film_page/wish.html"><img src="../static/img/film/wish.jpeg" class="card-img-top" alt="wish" width="150px" height="400px"></a>
                       
                       <div class="card-body">
                         <p class="card-text"><strong>WISH</strong></p>
@@ -88,7 +91,7 @@
             
                     <div class="card card_stile0" style="width: 18rem;">
                       
-                        <a href="film_page/adagio.html"><img src="img/film/adagio.jpeg" class="card-img-top" alt="adagio" width="150px" height="400px"></a>
+                        <a href="film_page/adagio.html"><img src="../static/img/film/adagio.jpeg" class="card-img-top" alt="adagio" width="150px" height="400px"></a>
                       
                       <div class="card-body">
                         <p class="card-text"><strong>ADAGIO</strong></p>
@@ -97,7 +100,7 @@
 
                     <div class="card card_stile0" style="width: 18rem;">
                       
-                      <a href="film_page/one_life.html"><img src="img/film/one_life.jpg" class="card-img-top" alt="adagio" width="150px" height="400px"></a>
+                      <a href="film_page/one_life.html"><img src="../static/img/film/one_life.jpg" class="card-img-top" alt="adagio" width="150px" height="400px"></a>
                     
                       <div class="card-body" >
                         <p class="card-text"><strong>ONE LIFE</strong></p>
@@ -110,7 +113,7 @@
                   <div class="cards-wrapper ">
                     <div class="card card_stile0" style="width: 18rem;">
                       
-                        <a href="film_page/aquaman.html"><img src="img/film/aquaman.jpg" class="card-img-top" alt="aquaman" width="150px" height="400px"></a>
+                        <a href="film_page/aquaman.html"><img src="../static/img/film/aquaman.jpg" class="card-img-top" alt="aquaman" width="150px" height="400px"></a>
                       
                       <div class="card-body">
                         <p class="card-text"><strong>AQUAMAN</strong></p>
@@ -119,7 +122,7 @@
             
                     <div class="card card_stile0" style="width: 18rem;">
                       
-                        <a href="film_page/napolion.html"><img src="img/film/napolion.jpg" class="card-img-top" alt="napolion" width="150px" height="400px"></a>
+                        <a href="film_page/napolion.html"><img src="../static/img/film/napolion.jpg" class="card-img-top" alt="napolion" width="150px" height="400px"></a>
                       
                       <div class="card-body">
                         <p class="card-text"><strong>NAPOLION</strong></p>
@@ -128,7 +131,7 @@
             
                     <div class="card card_stile0" style="width: 18rem;">
                       
-                        <a href="film_page/ferrari.html"><img src="img/film/ferrari.jpg" class="card-img-top" alt="ferrari" width="150px" height="400px"></a>
+                        <a href="film_page/ferrari.html"><img src="../static/img/film/ferrari.jpg" class="card-img-top" alt="ferrari" width="150px" height="400px"></a>
                       
                       <div class="card-body">
                         <p class="card-text"><strong>FERRARI</strong></p>
@@ -138,7 +141,7 @@
                     </div>
                     <div class="card card_stile0" style="width: 18rem; ">
                       
-                      <a href="film_page/pio_e_amedeo.html"><img src="img/film/pio_e_amedeo.jpg" class="card-img-top" alt="foglie_al_vento" width="150px" height="400px"></a>
+                      <a href="film_page/pio_e_amedeo.html"><img src="../static/img/film/pio_e_amedeo.jpg" class="card-img-top" alt="foglie_al_vento" width="150px" height="400px"></a>
                     
                     <div class="card-body" style="border: none;">
                       <p class="card-text"><strong>PIO E AMEDEO</strong></p>
@@ -151,7 +154,7 @@
                   <div class="cards-wrapper ">
                     <div class="card card_stile0" style="width: 18rem;">
                       
-                        <a href="film_page/wonka.html"><img src="img/film/wonka.jpg" class="card-img-top" alt="wonka" width="150px" height="400px"></a>
+                        <a href="film_page/wonka.html"><img src="../static/img/film/wonka.jpg" class="card-img-top" alt="wonka" width="150px" height="400px"></a>
                       
                       <div class="card-body">
                         <p class="card-text"><strong>WONKA</strong></p>
@@ -160,7 +163,7 @@
             
                     <div class="card card_stile0" style="width: 18rem;">
                       
-                        <a href="film_page/tutti_a_parte_mio_marito.html"><img src="img/film/tutti_a_parte_mio_marito.jpeg" class="card-img-top" alt="tutti_a_parte_mio_marito" width="150px" height="400px"></a>
+                        <a href="film_page/tutti_a_parte_mio_marito.html"><img src="../static/img/film/tutti_a_parte_mio_marito.jpeg" class="card-img-top" alt="tutti_a_parte_mio_marito" width="150px" height="400px"></a>
                       
                       <div class="card-body">
                         <p class="card-text"><strong>TUTTI_A_PARTE_MIO_MARITO</strong></p>
@@ -169,7 +172,7 @@
             
                     <div class="card card_stile0" style="width: 18rem; ">
                       
-                        <a href="film_page/foglie_al_vento.html"><img src="img/film/foglie_al_vento.jpeg" class="card-img-top" alt="foglie_al_vento" width="150px" height="400px"  ></a>
+                        <a href="film_page/foglie_al_vento.html"><img src="../static/img/film/foglie_al_vento.jpeg" class="card-img-top" alt="foglie_al_vento" width="150px" height="400px"  ></a>
                       
                       <div class="card-body" style="border: none;">
                         <p class="card-text"><strong>FOGLIE_AL_VENTO</strong></p>
@@ -178,7 +181,7 @@
 
                     <div class="card card_stile0" style="width: 18rem; ">
                       
-                      <a href="film_page/perfect_days.html"><img src="img/film/Perfect_days.jpg" class="card-img-top" alt="foglie_al_vento" width="150px" height="400px"  ></a>
+                      <a href="film_page/perfect_days.html"><img src="../static/img/film/Perfect_days.jpg" class="card-img-top" alt="foglie_al_vento" width="150px" height="400px"  ></a>
                     
                     <div class="card-body" style="border: none;">
                       <p class="card-text"><strong>PERFET DAYS</strong></p>
@@ -203,7 +206,7 @@
 
         <div class="container mb-1 mt-5">
           <a class="navbar-brand" href="#">
-            <img src="img/icone/white-black/movie-star_1456703.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+            <img src="../static/img/icone/white-black/movie-star_1456703.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
             Migliori film da quardare
           </a>
         </div>
@@ -215,7 +218,7 @@
           <div class="card mb-3 card_stile1" >
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="img/film/best/kotfm_alternative_poster_jpg_960x0_crop_q85.webp" class="img-fluid rounded-start" alt="..." width="800%">
+                <img src="../static/img/film/best/kotfm_alternative_poster_jpg_960x0_crop_q85.webp" class="img-fluid rounded-start" alt="..." width="800%">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -230,7 +233,7 @@
           <div class="card mb-3 card_stile2">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="img/film/best/oppenheimer_jpg_320x0_crop_q85.jpg" class="img-fluid rounded-start" alt="...">
+                <img src="../static/img/film/best/oppenheimer_jpg_320x0_crop_q85.jpg" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -245,7 +248,7 @@
           <div class="card mb-3 card_stile1" >
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="img/film/best/past_lives.webp" class="img-fluid rounded-start" alt="...">
+                <img src="../static/img/film/best/past_lives.webp" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -260,7 +263,7 @@
           <div class="card mb-3 card_stile2" >
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="img/film/best/santocielo_vert_def_jpg_320x0_crop_q85.webp" class="img-fluid rounded-start" alt="...">
+                <img src="../static/img/film/best/santocielo_vert_def_jpg_320x0_crop_q85.webp" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -284,7 +287,7 @@
     <div class="container"    style="margin-top:40%;">
       <div class="container mb-1 mt-5">
         <a class="navbar-brand" href="#">
-          <img src="img/icone/white-black/coming-soon_5229373.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
+          <img src="../static/img/icone/white-black/coming-soon_5229373.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
           Prossimamente
         </a>
       </div>
@@ -315,7 +318,7 @@
     
 
     
-    
+    {% endblock %}
   
     
 
@@ -328,78 +331,73 @@
 
     <div style="clear: both;">
       
-      <div class="nav justify-content-center bg-dark pt-5 " >
-
-        <img src="img/icone/cinema_1655698.png" alt="logo_cinema" width="300" height="300" style="margin-right: 80px;">
-
-
-        <table class="table   table-dark"  style="width:60%; float: right;" >
+      <div class="nav justify-content-center bg-dark pt-5">
+        
+        <img src="{{ url_for('static', filename='img/icone/cinema_1655698.png') }}" alt="cinema_logo" width="300" height="300" style="margin-right: 80px;">
+        
+        <table class="table table-dark" style="width:60%; float: right;">
           <thead>
             <tr>
-              <td>Eventi Rasegne</td>  
-              <td>ESPERIENZE</td>  
-              <td>Codice di condotta</td>  
+              <td>Events and Festivals</td>  
+              <td>EXPERIENCES</td>  
+              <td>Code of Conduct</td>  
             </tr>
-            
           </thead>
-          
-
+    
           <tbody>
             <tr>
               <td class="fs-10"> 
-                <p>Proiezioni</p>
-                <p>Eventi Rasegne</p>
-                <p>Abbonamenti e tessere</p>
-                <p>Tariffe</p>
-                <p>Sale</p>
+                <p>Screenings</p>
+                <p>Events and Festivals</p>
+                <p>Subscriptions and Memberships</p>
+                <p>Rates</p>
+                <p>Halls</p>
               </td>  
               <td>
-                <p>Proiezioni</p>
-                <p>Eventi Rasegne</p>
-                <p>Abbonamenti e tessere</p>
-                <p>Tariffe</p>
-                <p>Sale</p>
+                <p>Screenings</p>
+                <p>Events and Festivals</p>
+                <p>Subscriptions and Memberships</p>
+                <p>Rates</p>
+                <p>Halls</p>
               </td>  
               <td>
-                <p>Proiezioni</p>
-                <p>Eventi Rasegne</p>
-                <p>Abbonamenti e tessere</p>
-                <p>Tariffe</p>
-                <p>Sale</p>
+                <p>Screenings</p>
+                <p>Events and Festivals</p>
+                <p>Subscriptions and Memberships</p>
+                <p>Rates</p>
+                <p>Halls</p>
               </td>  
             </tr>
-
+    
             <tr>
-              
               <td colspan="2" align="end">
-                Seguici su 
+                Follow us on 
               </td>
               <td>
-                <img src="img/social/FACEBOOK-ICON.png" alt="" sizes="30" srcset="" width="30">
-                <img src="img/social/instagram.png" alt="" sizes="30" srcset="" width="30">
-                <img src="img/social/twitter.png" alt="" sizes="30" srcset="" width="30">
-                <img src="img/social/WHATSAPP-ICON.png" alt="" sizes="30" srcset="" width="30">
+                <img src="{{ url_for('static', filename='img/social/FACEBOOK-ICON.png') }}" alt="Facebook" sizes="30" srcset="" width="30">
+                <img src="{{ url_for('static', filename='img/social/instagram.png') }}" alt="Instagram" sizes="30" srcset="" width="30">
+                <img src="{{ url_for('static', filename='img/social/twitter.png') }}" alt="Twitter" sizes="30" srcset="" width="30">
+                <img src="{{ url_for('static', filename='img/social/WHATSAPP-ICON.png') }}" alt="WhatsApp" sizes="30" srcset="" width="30">
+
               </td>
             </tr>
-            
-            
           </tbody>
         </table>
-
         
       </div>
       <div class="navbar justify-content-center text-bg-dark p-3">
         <hr style="color: blue;">
-        <h5 class="fw-semibold">©Copyright 2019 - Designed by Pro World Studio - Consorzio dei Proprietari Casalma cinema - P.IVA 01390690194</h5>
+        <h5 class="fw-semibold">©Copyright 2019 - Designed by Pro World Studio - Consortium of Casalma Cinema Owners - VAT 01390690194</h5>
+      </div>
     </div>
-  </div>
-
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="java/java-carosel-interattivo.js"></script>
+    
+    <script src="{{ url_for('static', filename='java/java-carosel-interattivo.js') }}"></script>
+    
   
 
   </body>

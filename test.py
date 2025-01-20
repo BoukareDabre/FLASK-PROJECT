@@ -1,7 +1,14 @@
-from flask import Flask
+import json, os, random
+from flask import Flask, request, render_template, redirect
 
-app = Flask(__name__)
+template_dir = os.path.abspath('./templates')
+app = Flask(__name__,template_folder=template_dir)
 
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+
+
+@app.route('/', methods=['GET'])
+def index():
+    return render_template('luogo_cinema.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
