@@ -1,14 +1,24 @@
 import json, os, random
 from flask import Flask, request, render_template, redirect
 
-template_dir = os.path.abspath('./templates')
+template_dir = os.path.abspath('./Templates')
 app = Flask(__name__,template_folder=template_dir)
-
-
 
 @app.route('/', methods=['GET'])
 def index():
     return render_template('Index.html')
+
+@app.route('/base_film')
+def base_film():
+    return render_template('base_film.html')
+
+@app.route('/story_cinema')
+def story_cinema():
+    return render_template('story_cinema.html')
+
+@app.route('/luogo_cinema')
+def luogo_cinema():
+    return render_template('luogo_cinema.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
@@ -30,7 +40,7 @@ class Film:
         synopsis,
         trailer_url,
         poster_url,
-        screenings,
+        screenings
     ):
         self.id = id
         self.title = title
