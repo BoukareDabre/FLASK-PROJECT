@@ -4,6 +4,11 @@
 
 
   {% block content %}  
+  <style>
+    strong{
+        margin-right: 1px;
+    }
+  </style>
 
 
   <div class="container mb-5">
@@ -12,11 +17,11 @@
       <div class="card-body">
         <div style="font-size: 13px;">
           <p class="card-text" >
-            <p style="color: white;"><strong >Regia:</strong> Stefano Sollima</p>
-            <p style="color: white;"><strong>Genere:</strong> Poliziesco, Drammatico</p>
-            <p style="color: white;"><strong>Anno:</strong> 2023</p>
-            <p style="color: white;"><strong>Attori:</strong> Pierfrancesco Favino, Toni Servillo, Adriano Giannini, Valerio Mastandrea, Gianmarco Franchini, Francesco Di Leva, Lorenzo Adorni, Silvia Salvatori</p>
-            <p style="color: white;"><strong>Data di uscita:</strong> 14 dicembre 2023</p>
+            <p style="color: white;"><strong >Regia: </strong> {{film_ricercato.get_director()}}</p>
+            <p style="color: white;"><strong>Genere:</strong> {{ ', '.join(film_ricercato.get_genre()) }}</p>
+            <p style="color: white;"><strong>Anno:</strong> {{film_ricercato.get_year()}}</p>
+            <p style="color: white;"><strong>Attori:</strong> {{ ', '.join(film_ricercato.get_actors()) }}</p>
+            <p style="color: white;"><strong>Data di uscita:</strong> {{film_ricercato.get_release_date()}}</p>
           </p>
 
         </div>
@@ -24,8 +29,8 @@
     </div>
 
     <div class="descrizione_movi">
-        <h2 style="border-bottom: 10px rgb(182, 33, 33) solid;">Adagio</h2>
-        <p><span>2023 | Poliziesco, Drammatico | 127 min</span></p>
+        <h2 style="border-bottom: 10px rgb(229, 229, 229) solid;">{{film_ricercato.get_title()}}</h2>
+        <p><span>{{film_ricercato.get_year()}} | {{ ', '.join(film_ricercato.get_genre()) }} | {{film_ricercato.get_duration_minutes()  }} min </span></p>
         <a href="../aquisto/login.html"><button type="button" class="btn btn-outline-danger">Aquista</button></a>
 
         <div class="container mb-1 mt-5">
