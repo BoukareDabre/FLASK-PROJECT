@@ -4,43 +4,25 @@ from flask import Flask, request, render_template, redirect
 template_dir = os.path.abspath('./Templates')
 app = Flask(__name__,template_folder=template_dir)
 
-@app.route('/', methods=['GET'])
-def index():
-    return render_template('Index.html')
-
-@app.route('/base_film')
-def base_film():
-    return render_template('base_film.html')
-
-@app.route('/story_cinema')
-def story_cinema():
-    return render_template('story_cinema.html')
-
-@app.route('/luogo_cinema')
-def luogo_cinema():
-    return render_template('luogo_cinema.html')
-
-if __name__ == '__main__':
-    app.run(debug=True)
-
+DB = "./DataBase/db.json"
 
 #mi creao la mia classe film
 class Film:
     def __init__(
         self,
-        id,
-        title,
-        director,
-        genre,
-        year,
-        actors,
-        release_date,
-        duration_minutes,
-        distribution,
-        synopsis,
-        trailer_url,
-        poster_url,
-        screenings
+        id: int,  # id del film, un intero
+        title: str,  # titolo del film, una stringa
+        director: str,  # regista, una stringa
+        genre: str,  # genere del film, una stringa
+        year: int,  # anno di uscita, un intero
+        actors: list[str],  # elenco degli attori, una lista di stringhe
+        release_date: str,  # data di uscita, una stringa (es. 'YYYY-MM-DD')
+        duration_minutes: int,  # durata in minuti, un intero
+        distribution: str,  # distribuzione, una stringa
+        synopsis: str,  # sinossi, una stringa
+        trailer_url: str,  # URL del trailer, una stringa
+        poster_url: str,  # URL del poster, una stringa
+        screenings: list[str]  # screening del film, una lista di stringhe (date o luoghi)
     ):
         self.id = id
         self.title = title
@@ -55,6 +37,7 @@ class Film:
         self.trailer_url = trailer_url
         self.poster_url = poster_url
         self.screenings = screenings
+
 
 
     #aggiungo tutti i metodi get
@@ -96,3 +79,64 @@ class Film:
 
     def get_screenings(self):
         return self.screenings
+
+
+@app.route('/', methods=['GET'])
+def index():
+    return render_template('Index.html')
+
+
+@app.route('/film')
+def film():
+    # Recupera il parametro 'film' dalla query string
+    id_film = request.args.get('id')
+    with open(DB, "r") as file:
+        dizionario_film = json.load(file)
+
+    film_list = []
+   
+    for jsonFile in dizionario_film:
+        film = Film(int(jsonFile['id']), 
+                    jsonFile['title'], 
+                    jsonFile['director'], 
+                    jsonFile['genre'], 
+                    jsonFile['year'], 
+                    jsonFile['actors'], 
+                    jsonFile['release_date'], 
+                    jsonFile['duration_minutes'], 
+                    jsonFile['distribution'], 
+                    jsonFile['synopsis'], 
+                    jsonFile['trailer_url'], 
+                    jsonFile['poster_url'], 
+                    jsonFile['screenings'])
+
+        film_list.append(film)
+
+    film_selezionato = None  # Inizializza la variabile
+    for film_ricercato in film_list:  # Itera su film_list
+        if id_film == str(film_ricercato.get_id()):  # Confronta gli id come stringhe
+            film_selezionato = film_ricercato
+            break
+
+    # Gestione caso in cui il film non è trovato
+    if film_selezionato is None:
+        return render_template('base_film.html', message="Film non trovato")
+    
+    # Passa il film trovato alla template
+    return render_template('base_film.html', film_ricercato=film_selezionato)
+
+
+
+
+@app.route('/story_cinema')
+def story_cinema():
+    return render_template('story_cinema.html')
+
+@app.route('/luogo_cinema')
+def luogo_cinema():
+    return render_template('luogo_cinema.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+

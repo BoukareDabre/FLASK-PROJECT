@@ -1,5 +1,5 @@
-{
-    "movies": [
+
+    [
       {
         "id": 1,
         "title": "Adagio",
@@ -21,7 +21,7 @@
         "distribution": "Vision Distribution",
         "synopsis": "Adagio è un film di genere poliziesco, drammatico del 2023, diretto da Stefano Sollima, con Pierfrancesco Favino e Toni Servillo. Uscita al cinema il 14 dicembre 2023. Durata 127 minuti.",
         "trailer_url": "https://www.youtube.com/watch?v=B2JKYmVnLOo&ab_channel=VisionDistribution",
-        "poster_url": "../img/film/adagio.jpeg",
+        "poster_url": "../static/img/film/adagio.jpeg",
         "screenings": [
           {
             "date": "2025-01-31",
@@ -81,7 +81,7 @@
       "distribution": "Warner Bros.",
       "synopsis": "Aquaman e il Regno Perduto è un film di genere azione, fantascienza del 2023, diretto da James Wan, con Jason Momoa e Patrick Wilson. Uscita al cinema il 20 dicembre 2023. Durata 115 minuti.",
       "trailer_url": "https://www.youtube.com/watch?v=tVlr_GLrQ4M&ab_channel=UniversalPicturesInternationalItaly",
-      "poster_url": "../img/film/aquaman.jpg",
+      "poster_url": "../static/img/film/aquaman.jpg",
       "screenings": [
         {
           "date": "2024-01-31",
@@ -148,7 +148,7 @@
         "distribution": "01 Distribution",
         "synopsis": "Ferrari è un film di genere biografico, drammatico del 2023, diretto da Michael Mann, con Adam Driver e Penélope Cruz. Uscita al cinema il 14 dicembre 2023. Durata 130 minuti.",
         "trailer_url": "https://www.youtube.com/watch?v=8oOVNMjM1Jk&ab_channel=NEON",
-        "poster_url": "../img/film/ferrari.jpg",
+        "poster_url": "../static/img/film/ferrari.jpg",
         "screenings": [
           {
             "date": "2025-01-31",
@@ -193,7 +193,7 @@
         "distribution": "Lucky Red in collaborazione con BIM distribuzioni",
         "synopsis": "Foglie al Vento è un film di genere commedia, drammatico del 2023, diretto da Aki Kaurismäki, con Alma Pöysti e Jussi Vatanen. Uscita al cinema il 21 dicembre 2023. Durata 81 minuti.",
         "trailer_url": "https://www.youtube.com/watch?v=bPqhSe46AUI&ab_channel=FilmIsNowTrailerItalia",
-        "poster_url": "../img/film/foglie_al_vento.jpeg",
+        "poster_url": "../static/img/film/foglie_al_vento.jpeg",
         "screenings": [
             {
                 "date": "2025-01-31",
@@ -255,7 +255,7 @@
         "distribution": "Eagle Pictures",
         "synopsis": "Napoleon è un film di genere azione, biografico, storico, guerra del 2023, diretto da Ridley Scott, con Joaquin Phoenix e Vanessa Kirby. Uscita al cinema il 23 novembre 2023. Durata 158 minuti. Distribuito da Eagle Pictures.",
         "trailer_url": "https://www.youtube.com/watch?v=rztd9Kw_D1I&ab_channel=SonyPicturesItalia",
-        "poster_url": "../img/film/napolion.jpg",
+        "poster_url": "../static/img/film/napolion.jpg",
         "screenings": [
           {
             "date": "2025-01-31",
@@ -310,7 +310,7 @@
         "distribution": "Eagle Pictures",
         "synopsis": "One Life è un film di genere drammatico, biografico del 2023, diretto da James Hawes, con Anthony Hopkins e Helena Bonham Carter. Uscita al cinema il 21 dicembre 2023. Durata 110 minuti.",
         "trailer_url": "https://www.youtube.com/watch?v=Gt934__a7K8&ab_channel=EaglePictures",
-        "poster_url": "../img/film/one_life.jpg",
+        "poster_url": "../static/img/film/one_life.jpg",
         "screenings": [
           {
             "date": "2025-01-31",
@@ -366,7 +366,7 @@
         "distribution": "Lucky Red",
         "synopsis": "Perfect Days è un film di genere drammatico del 2023, diretto da Wim Wenders, con Kôji Yakusho e Min Tanaka. Uscita al cinema il 04 gennaio 2024. Durata 124 minuti.",
         "trailer_url": "https://www.youtube.com/watch?v=PUAaGSqiN-c&ab_channel=FilmIsNowTrailerItalia",
-        "poster_url": "../img/film/Perfect_days.jpg",
+        "poster_url": "../static/img/film/Perfect_days.jpg",
         "screenings": [
           {
             "date": "2025-01-31",
@@ -420,7 +420,7 @@
         "distribution": "Vision Distribution",
         "synopsis": "Come può uno scoglio è un film di genere commedia del 2023, diretto da Gennaro Nunziante, con Amedeo Grieco e Pio D'Antini. Uscita al cinema il 28 dicembre 2023. Distribuito da Vision Distribution.",
         "trailer_url": "https://www.youtube.com/watch?v=HhC-FqwKS7Q&ab_channel=VisionDistribution",
-        "poster_url": "../img/film/pio_e_amedeo.jpg",
+        "poster_url": "../static/img/film/pio_e_amedeo.jpg",
         "screenings": [
           {
             "date": "2024-01-31",
@@ -466,7 +466,7 @@
         "distribution": "Universal Pictures International Italy",
         "synopsis": "Prendi Il Volo è un film di genere animazione, avventura, commedia del 2023, diretto da Benjamin Renner, con Elizabeth Banks e Awkwafina. Uscita al cinema il 07 dicembre 2023. Distribuito da Universal Pictures International Italy.",
         "trailer_url": "https://www.youtube.com/watch?v=tVlr_GLrQ4M&ab_channel=UniversalPicturesInternationalItaly",
-        "poster_url": "../img/film/Prendi_il_volo.jpg",
+        "poster_url": "../static/img/film/Prendi_il_volo.jpg",
         "screenings": [
           {
             "date": "2025-01-31",
@@ -509,7 +509,7 @@
         "distribution": "I Wonder Pictures",
         "synopsis": "Tutti a parte mio marito è un film di genere commedia, drammatico, sentimentale del 2023, diretto da Caroline Vignal, con Laure Calamy e Vincent Elbaz. Uscita al cinema il 21 dicembre 2023. Distribuito da I Wonder Pictures.",
         "trailer_url": "https://www.youtube.com/watch?v=to4KG6C_tWQ&ab_channel=IWonderPictures",
-        "poster_url": "../img/film/tutti_a_parte_mio_marito.jpeg",
+        "poster_url": "../static/img/film/tutti_a_parte_mio_marito.jpeg",
         "screenings": [
           {
             "date": "2025-01-31",
@@ -555,7 +555,7 @@
         "distribution": "The Walt Disney Company Italia",
         "synopsis": "Wish è un film di genere animazione, avventura, family del 2023, diretto da Chris Buck e Fawn Veerasunthorn. Uscita al cinema il 21 dicembre 2023. Durata 92 minuti.",
         "trailer_url": "https://www.youtube.com/watch?v=U_ENaaZYIaE&ab_channel=DisneyIT",
-        "poster_url": "../img/film/wish.jpeg",
+        "poster_url": "../static/img/film/wish.jpeg",
         "screenings": [
           {
             "date": "2024-01-31",
@@ -611,7 +611,7 @@
         "distribution": "Warner Bros. Pictures",
         "synopsis": "Wonka è un film di genere commedia, avventura del 2023, diretto da Paul King, con Timothée Chalamet e Calah Lane. Uscita al cinema il 14 dicembre 2023. Durata 116 minuti.",
         "trailer_url": "https://www.youtube.com/watch?v=S0cbkpi1ogc&ab_channel=WarnerBros.Italia",
-        "poster_url": "../img/film/wonka.jpg",
+        "poster_url": "../static/img/film/wonka.jpg",
         "screenings": [
           {
             "date": "2025-01-31",
@@ -649,5 +649,4 @@
 
 
     ]
-  }
   
