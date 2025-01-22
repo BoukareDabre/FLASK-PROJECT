@@ -83,7 +83,7 @@ class Film:
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('account.html')
+    return render_template('Index.html')
 
 
 @app.route('/film')
@@ -124,15 +124,6 @@ def film():
     
     # Passa il film trovato alla template
     return render_template('base_film.html', film_ricercato=film_selezionato)
-
-class User:
-    def __init__(
-        self,
-        id_user: int
-
-            
-    ):
-
 
 
 
