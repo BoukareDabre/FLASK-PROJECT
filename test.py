@@ -163,7 +163,6 @@ class User:
             return self.role
 
 
->>>>>>> 92ad59b92d04a4cb433ebcfb925a8dcf4588c443
 
 
 
