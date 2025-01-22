@@ -83,7 +83,7 @@ class Film:
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('Index.html')
+    return render_template('account.html')
 
 
 @app.route('/film')
