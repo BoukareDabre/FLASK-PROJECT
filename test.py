@@ -125,6 +125,15 @@ def film():
     # Passa il film trovato alla template
     return render_template('base_film.html', film_ricercato=film_selezionato)
 
+class User:
+    def __init__(
+        self,
+        id_user: int
+
+            
+    ):
+
+
 
 
 

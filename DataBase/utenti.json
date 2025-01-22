@@ -1,0 +1,10 @@
+[
+    {
+        "id_user": 1,
+        "name_user": "buba",
+        "mail":"BelloComeRaulo@gmail.com",
+        "password": "NonPagoAffitto",
+        "phone_number": "377 294 2492",
+        "role": "user"
+    }
+]
