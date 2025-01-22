@@ -136,6 +136,10 @@ def story_cinema():
 def luogo_cinema():
     return render_template('luogo_cinema.html')
 
+@app.route('/registration')
+def registration():
+    return render_template('registration.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
 
