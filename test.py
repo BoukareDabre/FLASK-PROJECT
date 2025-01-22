@@ -128,10 +128,37 @@ def film():
 class User:
     def __init__(
         self,
-        id_user: int
-
-            
+        id_user: int,
+        name_user: str,
+        mail: str,
+        password: str,
+        phone_number: str,
+        role: str       
     ):
+        self.id_user = id_user
+        self.name_user = name_user
+        self.mail = mail
+        self.password = password
+        self.phone_number = phone_number
+        self.role = role
+
+        def get_id_user(self):
+            return self.id_user
+        
+        def get_name_user(self):
+            return self.name_user
+        
+        def get_mail(self):
+            return self.mail
+        
+        def get_password(self):
+            return self.password
+        
+        def get_phone_number(self):
+            return self.phone_number
+        
+        def get_role(self):
+            return self.role
 
 
 
