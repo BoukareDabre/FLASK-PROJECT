@@ -113,6 +113,7 @@ def film():
         film_list.append(film)
 
     film_selezionato = None  # Inizializza la variabile
+
     for film_ricercato in film_list:  # Itera su film_list
         if id_film == str(film_ricercato.get_id()):  # Confronta gli id come stringhe
             film_selezionato = film_ricercato
@@ -124,6 +125,8 @@ def film():
     
     # Passa il film trovato alla template
     return render_template('base_film.html', film_ricercato=film_selezionato)
+
+DB_utenti = "./DataBase/utenti.json"
 
 class User:
     def __init__(
@@ -162,12 +165,12 @@ class User:
         def get_role(self):
             return self.role
 
-DB = "./DataBase/utenti.json"
+
 
 @app.route('/account')
 def utenti():
     id_user = request.args.get('id')
-    with open(DB, "r") as file:
+    with open(DB_utenti, "r") as file:
         dizionario_user = json.load(file)
     film_list = []
    
@@ -187,8 +190,9 @@ def utenti():
                     jsonFile['screenings'])
 
         film_list.append(film)
-
     return render_template('account.html')
+
+
 
 
 
@@ -204,7 +208,6 @@ def luogo_cinema():
 @app.route('/registration')
 def registration():
     return render_template('registration.html')
-
 if __name__ == '__main__':
     app.run(debug=True)
 

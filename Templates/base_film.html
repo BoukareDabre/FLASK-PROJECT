@@ -31,7 +31,7 @@
     <div class="descrizione_movi">
         <h2 style="border-bottom: 10px rgb(229, 229, 229) solid;">{{film_ricercato.get_title()}}</h2>
         <p><span>{{film_ricercato.get_year()}} | {{ ', '.join(film_ricercato.get_genre()) }} | {{film_ricercato.get_duration_minutes()  }} min </span></p>
-        <a href="../static/aquisto/login.html"><button type="button" class="btn btn-outline-danger">Aquista</button></a>
+        <a href="../registration?id={{film_ricercato.get_year()}}"><button type="button" class="btn btn-outline-danger">Aquista</button></a>
 
         <div class="container mb-1 mt-5">
           <div class="navbar-brand" >
