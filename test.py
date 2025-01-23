@@ -255,13 +255,16 @@ def registration():
 @app.route('/user', methods=['POST'])
 def user():
     tipo = request.args.get('tipo')
+    user = None
+
     if(tipo == "S"):
+
         with open(DB_utenti, "r") as file:
             users = json.load(file)
             print(f"Utenti caricati: {users}") 
 
         new_user = {
-            "id_user": users[-1]["id_user"] + 1,
+            "id_user": users[-1]["id_user"] + 1 if users else 1,
             "name_user": request.form.get('name'),
             "mail": request.form.get('email'),
             "password": request.form.get('password'),
@@ -277,18 +280,10 @@ def user():
 
         with open(DB_utenti, "w") as file:
             json.dump(users, file, indent=4)
-            print("File aggiornato!")
 
-    else:
-        with open(DB_utenti, "r") as file:
-            users = json.load(file)
-            print(f"Utenti caricati: {users}") 
-
+        user = new_user
         
-        
-
-
-    return render_template('registration.html',tipo=tipo)
+    return render_template('account.html', user=user)
 
 
 

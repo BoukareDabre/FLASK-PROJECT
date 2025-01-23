@@ -63,14 +63,14 @@
           <h2 style="text-align: center;">{% if tipo == "S" %}Sign in{% else %}Login{% endif %}</h2>
             <div class="mb-3 ">
               
-                <input type="text" class=" input mt-lg-5"  for="floatingInputInvalid" aria-describedby="emailHelp" placeholder="name" id="name">
+                <input type="text" class=" input mt-lg-5"  for="floatingInputInvalid" aria-describedby="emailHelp" placeholder="name" id="name" name="name">
                 <span id="nameError" class="error-msg"></span>
                 
                 <i class='bx bxs-user i' style="color:rgb(232, 0, 0) ;"></i>
               </div>
             <div class="mb-3 ">
               
-              <input type="email" class=" input mt-lg-5"  for="floatingInputInvalid" aria-describedby="emailHelp" placeholder="email" id="email">
+              <input type="email" class=" input mt-lg-5"  for="floatingInputInvalid" aria-describedby="emailHelp" placeholder="email" id="email" name="email">
               <span id="emailError" class="error-msg"></span>
               
               
@@ -78,7 +78,7 @@
             </div>
             <div class="mb-3">
                 
-                <input type="password"  class=" input mt-5" aria-describedby="passwordHelpBlock" placeholder="Password" id="password">
+                <input type="password"  class=" input mt-5" aria-describedby="passwordHelpBlock" placeholder="Password" id="password" name="password">
                 <span id="passwordError" class="error-msg"></span>
                 
                 <!--<i class='bx bxs-lock-alt i3' style="color: black;"></i>-->
@@ -135,7 +135,7 @@
 
 
 
-    <script>
+    <script> 
       document.querySelector("form").addEventListener("submit", controlli);
       function controlli(e) {
           let isValid = true;
@@ -205,6 +205,6 @@
           // Blocca la sottomissione del form se non valido
           if (!isValid) 
               e.preventDefault();
-      }
+      } 
     </script>
 {% endblock %}

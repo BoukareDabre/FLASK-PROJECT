@@ -25,5 +25,83 @@
             "Reservation2"
         ],
         "role": "user"
+    },
+    {
+        "id_user": 3,
+        "name_user": null,
+        "mail": null,
+        "password": null,
+        "phone_number": "3332224444",
+        "Profileimage_url": "https://example.com/buba.jpg",
+        "reservations": [
+            "Reservation1",
+            "Reservation2"
+        ],
+        "role": "user"
+    },
+    {
+        "id_user": 4,
+        "name_user": null,
+        "mail": null,
+        "password": null,
+        "phone_number": "3332224444",
+        "Profileimage_url": "https://example.com/buba.jpg",
+        "reservations": [
+            "Reservation1",
+            "Reservation2"
+        ],
+        "role": "user"
+    },
+    {
+        "id_user": 5,
+        "name_user": null,
+        "mail": null,
+        "password": null,
+        "phone_number": "3332224444",
+        "Profileimage_url": "https://example.com/buba.jpg",
+        "reservations": [
+            "Reservation1",
+            "Reservation2"
+        ],
+        "role": "user"
+    },
+    {
+        "id_user": 6,
+        "name_user": null,
+        "mail": null,
+        "password": null,
+        "phone_number": "3332224444",
+        "Profileimage_url": "https://example.com/buba.jpg",
+        "reservations": [
+            "Reservation1",
+            "Reservation2"
+        ],
+        "role": "user"
+    },
+    {
+        "id_user": 7,
+        "name_user": null,
+        "mail": null,
+        "password": null,
+        "phone_number": "fsafas",
+        "Profileimage_url": "https://example.com/buba.jpg",
+        "reservations": [
+            "Reservation1",
+            "Reservation2"
+        ],
+        "role": "user"
+    },
+    {
+        "id_user": 8,
+        "name_user": "fdsfdsdsf",
+        "mail": "fdfsdf@fdsf.com",
+        "password": "fdsfsdfds",
+        "phone_number": "3332224444",
+        "Profileimage_url": "https://example.com/buba.jpg",
+        "reservations": [
+            "Reservation1",
+            "Reservation2"
+        ],
+        "role": "user"
     }
 ]
