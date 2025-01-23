@@ -1,10 +1,13 @@
 [
     {
-        "id": 1,
+        "id_user": 1,
         "name_user": "buba",
-        "mail":"BelloComeRaulo@gmail.com",
+        "mail": "BelloComeRaulo@gmail.com",
         "password": "NonPagoAffitto",
         "phone_number": "377 294 2492",
+        "data_member": "2025-01-01", 
+        "Profileimage_url": "https://example.com/buba.jpg", 
+        "reservations": ["Reservation1", "Reservation2"], 
         "role": "user"
     }
 ]

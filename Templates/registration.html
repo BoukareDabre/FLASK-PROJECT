@@ -49,94 +49,162 @@
       outline: none;
       border-bottom: solid black 2px;
     }
+    .error-msg {
+      color: red;
+      font-size: 12px;
+      margin-top: 5px;
+      display: block;
+  }
     
 
   </style>
     <div class="container " style="width: 25%; border: 3px solid #040404 ; border-radius: 5px; background-color: #ffffff; padding-bottom: 1%;color: black;margin-bottom: 5%;">
         <form class="mt-2" action="login.html">
-            <h2 style="text-align: center;">Sign in</h2>
+          <h2 style="text-align: center;">{% if tipo == "S" %}Sign in{% else %}Login{% endif %}</h2>
             <div class="mb-3 ">
               
-                <input type="text" class=" input mt-lg-5"  for="floatingInputInvalid" aria-describedby="emailHelp" placeholder="name">
-                <span id="uno"></span>
+                <input type="text" class=" input mt-lg-5"  for="floatingInputInvalid" aria-describedby="emailHelp" placeholder="name" id="name">
+                <span id="nameError" class="error-msg"></span>
                 
-                <i class='bx bxs-user i' style="color:black ;"></i>
+                <i class='bx bxs-user i' style="color:rgb(232, 0, 0) ;"></i>
               </div>
             <div class="mb-3 ">
               
-              <input type="email" class=" input mt-lg-5"  for="floatingInputInvalid" aria-describedby="emailHelp" placeholder="email">
-              <span id="cinque"></span>
+              <input type="email" class=" input mt-lg-5"  for="floatingInputInvalid" aria-describedby="emailHelp" placeholder="email" id="email">
+              <span id="emailError" class="error-msg"></span>
               
               
               <i class='bx bxs-envelope i2' style="color: black;"></i>
             </div>
             <div class="mb-3">
                 
-                <input type="password"  class=" input mt-5" aria-describedby="passwordHelpBlock" placeholder="Password">
-                <span></span>
+                <input type="password"  class=" input mt-5" aria-describedby="passwordHelpBlock" placeholder="Password" id="password">
+                <span id="passwordError" class="error-msg"></span>
                 
                 <!--<i class='bx bxs-lock-alt i3' style="color: black;"></i>-->
                 
                 
             </div>
+            {% if tipo != "L" %}
+            <div class="mb-3">
+                <input type="password" class="input mt-5" aria-describedby="passwordHelpBlock" placeholder="Password" id="confirmPassword">
+                <span id="confirmPasswordError" class="error-msg"></span>
+                <!-- <i class='bx bxs-lock-alt i3' style="color: black;"></i> -->
+            </div>
+
+            <div class="mb-3">
+              <input type="tel" class="input mt-5" id="phone" name="phone" placeholder="Enter your phone number" id="phone">
+              <span id="phoneError" class="error-msg"></span>
+            </div>
+            {% endif %}
+
             <div class="mb-3 form-check ">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1 importante" >
-                <label class="form-check-label" for="exampleCheck1" style="font-size: 12px;">
+                <input type="checkbox" class="form-check-input" id="terms" >
+                <label class="form-check-label" for="exampleCheck1" style="font-size: 12px;" id="terms">
                     Accept Terms and Conditions & Privacy Policy
                 </label>
+                
             </div>
             <div class="mb-3 form-check ">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <input type="checkbox" class="form-check-input" id="terms">
                 <label class="form-check-label" for="exampleCheck1" style="font-size: 12px;">
                     Accept to receive time-saving design articles and notifications about the latest news
-                </label>
+                </label>  
+                <span id="termsError" class="error-msg"></span>
             </div>
-            <div class="mb-3 form-check ">
+            <!--<div class="mb-3 form-check ">
               <input type="checkbox" class="form-check-input" id="exampleCheck1 ">
               <label class="form-check-label" for="exampleCheck1" style="font-size: 15px;">Remember</label>
-            </div>
-            <a href="login.html"><button type="submit" class="btn btn-primary mb-3" style=" width: 90%;text-align: center; margin-left: 5%; border-radius: 20px;">Registration</button></a>
-            <p class="d-inline " style="margin-left: 28%;">If you have an account <a href="login.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" style="color: black;">Login</a></p>
+            </div>-->
+            <a href="#"><button type="submit" class="btn btn-dark mb-3" style=" width: 90%;text-align: center; margin-left: 5%; border-radius: 20px;">{% if tipo == "S" %}Sign in{% else %}Login{% endif %}</button></a>
+            
+            <p class="d-inline" style="margin-left: 28%;">
+              {% if tipo == "S" %}
+                  If you have an account 
+              {% else %}
+                  If you don't have an account 
+              {% endif %}
+              <a href="{% if tipo == 'S' %}/registration?tipo=L{% else %}/registration?tipo=S{% endif %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" style="color: black;">
+                  {% if tipo != 'S' %}Sign In{% else %}Login{% endif %}
+              </a>
+          </p>
+          
           </form>
 
     </div>
 
-    {% endblock %}
 
-  <script>
-    document.querySelector("form").addEventListener("submit", controlli);
 
-    function controlli(e) {
-        let nome = document.querySelector("input[type=text]").value;
-        let msg1 = document.getElementById("uno");
-
-        if (nome.trim().length < 3) {
-            msg1.innerHTML = "Il nome non soddisfa i requisiti";
-            e.preventDefault();
-            return;
-        } else {
-            msg1.style.display = "none";
-        }
-
-        let email = document.querySelector("input[type=email]").value;
-        let msg5 = document.getElementById("cinque");
-
-        if (!email.endsWith("@gmail.com")) {
-            msg5.innerHTML = "L'email deve contenere @gmail.com";
-            e.preventDefault();
-            return;
-        } else {
-            msg5.style.display = "none";
-        }
-
-        let accettaTermini = document.getElementById("importante");
-        let msg6 = document.getElementById("cinque");
-        if (accettaTermini.checked) {
-            e.preventDefault();
-            msg5.innerHTML = "accettare le condizioni";
-            return;
-        }
-    }
-</script>
-
-</html>
+    <script>
+      document.querySelector("form").addEventListener("submit", controlli);
+      function controlli(e) {
+          let isValid = true;
+      
+          // Nome Controllo
+          let name = document.getElementById("name").value.trim();
+          let nameError = document.getElementById("nameError");
+          if (name.length < 3) {
+              nameError.textContent = "Name must be at least 3 characters long.";
+              isValid = false;
+              e.preventDefault();
+              return;
+          } else {
+              nameError.textContent = "";
+          }
+      
+          // Email Controllo
+          let email = document.getElementById("email").value.trim();
+          let emailError = document.getElementById("emailError");
+          if (!email.includes("@") || !email.includes(".") || email.length < 5) {
+              emailError.textContent = "Enter a valid email address.";
+              isValid = false;
+          } else {
+              emailError.textContent = "";
+          }
+      
+          // Password Controllo
+          let password = document.getElementById("password").value.trim();
+          let passwordError = document.getElementById("passwordError");
+          if (password.length < 8) {
+              passwordError.textContent = "Password must be at least 8 characters long.";
+              isValid = false;
+          } else {
+              passwordError.textContent = "";
+          }
+      
+          // Confirm Password Controllo
+          let confirmPassword = document.getElementById("confirmPassword");
+          let confirmPasswordError = document.getElementById("confirmPasswordError");
+          if (confirmPassword && password !== confirmPassword.value.trim()) {
+              confirmPasswordError.textContent = "Passwords do not match.";
+              isValid = false;
+          } else if (confirmPassword) {
+              confirmPasswordError.textContent = "";
+          }
+      
+          // Phone Controllo
+          let phone = document.getElementById("phone");
+          let phoneError = document.getElementById("phoneError");
+          if (phone && !phone.value.trim().match(/^\d{10}$/)) {
+              phoneError.textContent = "Enter a valid 10-digit phone number.";
+              isValid = false;
+          } else if (phone) {
+              phoneError.textContent = "";
+          }
+      
+          // Terms Controllo
+          let terms = document.getElementById("terms").checked;
+          let termsError = document.getElementById("termsError");
+          if (!terms) {
+              termsError.textContent = "You must accept the terms and conditions.";
+              isValid = false;
+          } else {
+              termsError.textContent = "";
+          }
+      
+          // Blocca la sottomissione del form se non valido
+          if (!isValid) 
+              e.preventDefault();
+      }
+    </script>
+{% endblock %}

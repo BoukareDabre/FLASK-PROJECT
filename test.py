@@ -129,6 +129,9 @@ def film():
 DB_utenti = "./DataBase/utenti.json"
 
 class User:
+    """
+    Classe che rappresenta un utente con attributi personali e di ruolo.
+    """
     def __init__(
         self,
         id_user: int,
@@ -136,61 +139,100 @@ class User:
         mail: str,
         password: str,
         phone_number: str,
-        data_member: str,
-        Profileimage_url: str,
-        role: str       
+        data_member: str = "",
+        profile_image_url: str = "",
+        reservations: list[str] = None,
+        role: str = "user"
     ):
         self.id_user = id_user
         self.name_user = name_user
         self.mail = mail
         self.password = password
         self.phone_number = phone_number
+        self.data_member = data_member
+        self.profile_image_url = profile_image_url
+        self.reservations = reservations 
         self.role = role
 
-        def get_id_user(self):
-            return self.id_user
-        
-        def get_name_user(self):
-            return self.name_user
-        
-        def get_mail(self):
-            return self.mail
-        
-        def get_password(self):
-            return self.password
-        
-        def get_phone_number(self):
-            return self.phone_number
-        
-        def get_role(self):
-            return self.role
+    def get_id_user(self) -> int:
+        """Ritorna l'ID dell'utente."""
+        return self.id_user
+
+    def get_name_user(self) -> str:
+        """Ritorna il nome dell'utente."""
+        return self.name_user
+
+    def get_mail(self) -> str:
+        """Ritorna l'indirizzo email dell'utente."""
+        return self.mail
+
+    def get_password(self) -> str:
+        """Ritorna la password dell'utente."""
+        return self.password
+
+    def get_phone_number(self) -> str:
+        """Ritorna il numero di telefono dell'utente."""
+        return self.phone_number
+
+    def get_role(self) -> str:
+        """Ritorna il ruolo dell'utente."""
+        return self.role
+
+    def get_reservations(self) -> list[str]:
+        """Ritorna le prenotazioni dell'utente."""
+        return self.reservations
+
+    def get_profile_image_url(self) -> str:
+        """Ritorna l'URL dell'immagine di profilo dell'utente."""
+        return self.profile_image_url
 
 
 
 @app.route('/account')
 def utenti():
+    # Retrieve the 'id' parameter from the query string
     id_user = request.args.get('id')
+
+    # Load the user data from the JSON file
     with open(DB_utenti, "r") as file:
         dizionario_user = json.load(file)
-    film_list = []
-   
-    for jsonFile in dizionario_user:
-        user = User(int(jsonFile['id']), 
-                    jsonFile['title'], 
-                    jsonFile['director'], 
-                    jsonFile['genre'], 
-                    jsonFile['year'], 
-                    jsonFile['actors'], 
-                    jsonFile['release_date'], 
-                    jsonFile['duration_minutes'], 
-                    jsonFile['distribution'], 
-                    jsonFile['synopsis'], 
-                    jsonFile['trailer_url'], 
-                    jsonFile['poster_url'], 
-                    jsonFile['screenings'])
 
-        film_list.append(film)
-    return render_template('account.html')
+    user_list = []
+
+    # Iterate over the user dictionary and create User objects
+    for jsonFile in dizionario_user:
+        # Skip entries missing 'id_user'
+        if 'id_user' not in jsonFile:
+            continue
+
+        # Create a User object for each valid entry
+        user = User(
+            int(jsonFile['id_user']),
+            jsonFile['name_user'],
+            jsonFile['mail'],
+            jsonFile['password'],
+            jsonFile['phone_number'],
+            jsonFile['data_member'],
+            jsonFile['Profileimage_url'],
+            jsonFile['reservations'],
+            jsonFile['role']
+        )
+        user_list.append(user)
+        
+
+    # Find the user with the specified ID
+    user_selezionato = None
+    for user in user_list:
+        if id_user == str(user.get_id_user()):  # Compare IDs as strings
+            user_selezionato = user
+            break
+
+    # Handle case where user is not found
+    if user_selezionato is None:
+        return render_template('account.html', message="Utente non trovato")
+
+    # Pass the selected user to the template
+    return render_template('account.html', user_selezionato=user_selezionato)
 
 
 
@@ -207,7 +249,11 @@ def luogo_cinema():
 
 @app.route('/registration')
 def registration():
-    return render_template('registration.html')
+    tipo = request.args.get('tipo')
+    return render_template('registration.html',tipo=tipo)
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 
