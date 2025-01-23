@@ -76,10 +76,10 @@
                 <a class="nav-link " href="../HOME.html">Film</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Storia</a>
+                <a class="nav-link" href="#">Story</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Luogo</a>
+                <a class="nav-link" href="#">Place</a>
               </li>
             </ul>
           </div>
@@ -115,90 +115,87 @@
             <div class="mb-3 form-check ">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1 importante" >
                 <label class="form-check-label" for="exampleCheck1" style="font-size: 12px;">
-                    Accetta Termini e Condizioni & Informativa Privacy
+                    Accept Terms and Conditions & Privacy Policy
                 </label>
             </div>
             <div class="mb-3 form-check ">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1" style="font-size: 12px;">
-                    Accetta di ricevere articoli sul design che ti fanno risparmiare tempo e notifiche sulle ultime novità
+                    Accept to receive time-saving design articles and notifications about the latest news
                 </label>
             </div>
             <div class="mb-3 form-check ">
               <input type="checkbox" class="form-check-input" id="exampleCheck1 ">
-              <label class="form-check-label" for="exampleCheck1" style="font-size: 15px;">Ricordami</label>
+              <label class="form-check-label" for="exampleCheck1" style="font-size: 15px;">Remember</label>
             </div>
             <a href="login.html"><button type="submit" class="btn btn-primary mb-3" style=" width: 90%;text-align: center; margin-left: 5%; border-radius: 20px;">Registration</button></a>
-            <p class="d-inline " style="margin-left: 28%;">hai un account <a href="login.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" style="color: black;">Login</a></p>
+            <p class="d-inline " style="margin-left: 28%;">If you have an account <a href="login.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" style="color: black;">Login</a></p>
           </form>
 
     </div>
 
-    <div style="clear: both; margin-top: 20%;">
-      <hr>
-      <div class="nav justify-content-center bg-dark pt-5 " >
+    <hr>
 
-        <img src="../img/icone/cinema_1655698.png" alt="logo_cinema" width="300" height="300" style="margin-right: 80px;">
-
-
-        <table class="table   table-dark"  style="width:60%; float: right;" >
+    <div style="clear: both;">
+      
+      <div class="nav justify-content-center bg-dark pt-5">
+        
+        <img src="{{ url_for('static', filename='img/icone/cinema_1655698.png') }}" alt="cinema_logo" width="300" height="300" style="margin-right: 80px;">
+        
+        <table class="table table-dark" style="width:60%; float: right;">
           <thead>
             <tr>
-              <td>Eventi Rasegne</td>  
-              <td>ESPERIENZE</td>  
-              <td>Codice di condotta</td>  
+              <td>Events and Festivals</td>
+              <td>EXPERIENCES</td>  
+              <td>Code of Conduct</td>  
             </tr>
-            
           </thead>
-          
-
+    
           <tbody>
             <tr>
               <td class="fs-10"> 
-                <p>Proiezioni</p>
-                <p>Eventi Rasegne</p>
-                <p>Abbonamenti e tessere</p>
-                <p>Tariffe</p>
-                <p>Sale</p>
+                <p>Screenings</p>
+                <p>Events and Festivals</p>
+                <p>Subscriptions and Memberships</p>
+                <p>Rates</p>
+                <p>Halls</p>
               </td>  
               <td>
-                <p>Proiezioni</p>
-                <p>Eventi Rasegne</p>
-                <p>Abbonamenti e tessere</p>
-                <p>Tariffe</p>
-                <p>Sale</p>
+                <p>Screenings</p>
+                <p>Events and Festivals</p>
+                <p>Subscriptions and Memberships</p>
+                <p>Rates</p>
+                <p>Halls</p>
               </td>  
               <td>
-                <p>Proiezioni</p>
-                <p>Eventi Rasegne</p>
-                <p>Abbonamenti e tessere</p>
-                <p>Tariffe</p>
-                <p>Sale</p>
+                <p>Screenings</p>
+                <p>Events and Festivals</p>
+                <p>Subscriptions and Memberships</p>
+                <p>Rates</p>
+                <p>Halls</p>
               </td>  
             </tr>
-
+    
             <tr>
-              
               <td colspan="2" align="end">
-                Seguici su 
+                Follow us on 
               </td>
               <td>
-                <img src="../img/social/FACEBOOK-ICON.png" alt="" sizes="30" srcset="" width="30">
-                <img src="../img/social/instagram.png" alt="" sizes="30" srcset="" width="30">
-                <img src="../img/social/twitter.png" alt="" sizes="30" srcset="" width="30">
-                <img src="../img/social/WHATSAPP-ICON.png" alt="" sizes="30" srcset="" width="30">
+                <img src="{{ url_for('static', filename='img/social/FACEBOOK-ICON.png') }}" alt="Facebook" sizes="30" srcset="" width="30">
+                <img src="{{ url_for('static', filename='img/social/instagram.png') }}" alt="Instagram" sizes="30" srcset="" width="30">
+                <img src="{{ url_for('static', filename='img/social/twitter.png') }}" alt="Twitter" sizes="30" srcset="" width="30">
+                <img src="{{ url_for('static', filename='img/social/WHATSAPP-ICON.png') }}" alt="WhatsApp" sizes="30" srcset="" width="30">
+
               </td>
             </tr>
-            
-            
           </tbody>
         </table>
-
         
       </div>
       <div class="navbar justify-content-center text-bg-dark p-3">
         <hr style="color: blue;">
-        <h5 class="fw-semibold">©Copyright 2019 - Designed by Pro World Studio - Consorzio dei Proprietari Casalma cinema - P.IVA 01390690194</h5>
+        <h5 class="fw-semibold">©Copyright 2019 - Designed by Pro World Studio - Consortium of Casalma Cinema Owners - VAT 01390690194</h5>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
