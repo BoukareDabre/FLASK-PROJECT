@@ -1,0 +1,142 @@
+{% extends "Index.html" %}   
+  {% block title %}About Us - Cinemania{% endblock %}
+  {% block content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mycss.css') }}">
+  </head>
+  <style>
+    
+    .input{
+        width: 100%;
+        height: 100%;
+        
+        border: none;
+        outline: none;
+       
+    }
+    .hr{
+      top: 33.5%;
+    }
+    .i{
+        position: absolute;
+        right: 39%;
+        top: 36.55%;
+        transform: translateY(-50X);
+        font-size: 20px;
+    }
+
+    .i2{
+        position: absolute;
+        right: 39%;
+        top: 50%;
+        transform: translateY(-50X);
+        font-size: 20px;
+    }
+    .i3{
+        position: absolute;
+        right: 39%;
+        top: 65%;
+        transform: translateY(-50X);
+        font-size: 20px;
+    }
+
+    .input{
+      width: 100%;
+      padding: 0 5px;
+      height: 40px;
+      font-size: 16px;
+      border: none;
+      background: none;
+      outline: none;
+      border-bottom: solid black 2px;
+    }
+    
+
+  </style>
+    <div class="container " style="width: 25%; border: 3px solid #040404 ; border-radius: 5px; background-color: #ffffff; padding-bottom: 1%;color: black;margin-bottom: 5%;">
+        <form class="mt-2" action="login.html">
+            <h2 style="text-align: center;">Sign in</h2>
+            <div class="mb-3 ">
+              
+                <input type="text" class=" input mt-lg-5"  for="floatingInputInvalid" aria-describedby="emailHelp" placeholder="name">
+                <span id="uno"></span>
+                
+                <i class='bx bxs-user i' style="color:black ;"></i>
+              </div>
+            <div class="mb-3 ">
+              
+              <input type="email" class=" input mt-lg-5"  for="floatingInputInvalid" aria-describedby="emailHelp" placeholder="email">
+              <span id="cinque"></span>
+              
+              
+              <i class='bx bxs-envelope i2' style="color: black;"></i>
+            </div>
+            <div class="mb-3">
+                
+                <input type="password"  class=" input mt-5" aria-describedby="passwordHelpBlock" placeholder="Password">
+                <span></span>
+                
+                <!--<i class='bx bxs-lock-alt i3' style="color: black;"></i>-->
+                
+                
+            </div>
+            <div class="mb-3 form-check ">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1 importante" >
+                <label class="form-check-label" for="exampleCheck1" style="font-size: 12px;">
+                    Accept Terms and Conditions & Privacy Policy
+                </label>
+            </div>
+            <div class="mb-3 form-check ">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1" style="font-size: 12px;">
+                    Accept to receive time-saving design articles and notifications about the latest news
+                </label>
+            </div>
+            <div class="mb-3 form-check ">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1 ">
+              <label class="form-check-label" for="exampleCheck1" style="font-size: 15px;">Remember</label>
+            </div>
+            <a href="login.html"><button type="submit" class="btn btn-primary mb-3" style=" width: 90%;text-align: center; margin-left: 5%; border-radius: 20px;">Registration</button></a>
+            <p class="d-inline " style="margin-left: 28%;">If you have an account <a href="login.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" style="color: black;">Login</a></p>
+          </form>
+
+    </div>
+
+    {% endblock %}
+
+  <script>
+    document.querySelector("form").addEventListener("submit", controlli);
+
+    function controlli(e) {
+        let nome = document.querySelector("input[type=text]").value;
+        let msg1 = document.getElementById("uno");
+
+        if (nome.trim().length < 3) {
+            msg1.innerHTML = "Il nome non soddisfa i requisiti";
+            e.preventDefault();
+            return;
+        } else {
+            msg1.style.display = "none";
+        }
+
+        let email = document.querySelector("input[type=email]").value;
+        let msg5 = document.getElementById("cinque");
+
+        if (!email.endsWith("@gmail.com")) {
+            msg5.innerHTML = "L'email deve contenere @gmail.com";
+            e.preventDefault();
+            return;
+        } else {
+            msg5.style.display = "none";
+        }
+
+        let accettaTermini = document.getElementById("importante");
+        let msg6 = document.getElementById("cinque");
+        if (accettaTermini.checked) {
+            e.preventDefault();
+            msg5.innerHTML = "accettare le condizioni";
+            return;
+        }
+    }
+</script>
+
+</html>

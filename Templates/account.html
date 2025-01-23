@@ -1,0 +1,95 @@
+{% extends "Index.html" %}   
+  {% block title %}About Us - Cinemania{% endblock %}
+  {% block content %}
+   <!-- Main Content -->
+   <div class="container">
+    <div class="row">
+      <!-- Account Info -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{{ url_for('static', filename='img/user-profile.png') }}" class="card-img-top" alt="User Profile" style="width:100%; height:250px;">
+          <div class="card-body">
+            <h5 class="card-title">Benvenuto, {{ user_name }}</h5>
+            <p class="card-text">Email: {{ user_email }}</p>
+            <p class="card-text">Membro dal: {{ user_since }}</p>
+            <a href="/logout" class="btn btn-danger">Logout</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Film Preferiti -->
+      <div class="col-md-8">
+        <h3>Film Preferiti</h3>
+        <div class="list-group mb-4">
+          {% for film in favorite_movies %}
+          <div class="list-group-item d-flex justify-content-between align-items-center">
+            <span>{{ film.title }}</span>
+            <a href="/remove_favorite/{{ film.id }}" class="btn btn-danger btn-sm">Rimuovi</a>
+          </div>
+          {% endfor %}
+        </div>
+        <form action="/add_favorite" method="POST">
+          <div class="input-group">
+            <select class="form-select" name="film_id" required>
+              <option value="" disabled selected>Scegli un film</option>
+              {% for film in available_movies %}
+              <option value="{{ film.id }}">{{ film.title }}</option>
+              {% endfor %}
+            </select>
+            <button type="submit" class="btn btn-primary">Aggiungi ai Preferiti</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Prenotazione Posti -->
+    <div class="mt-5">
+      <h3>Prenota un Posto</h3>
+      <form action="/reserve_seat" method="POST">
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label for="film" class="form-label">Film</label>
+            <select id="film" name="film_id" class="form-select" required>
+              <option value="" disabled selected>Scegli un film</option>
+              {% for film in available_movies %}
+              <option value="{{ film.id }}">{{ film.title }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="seat" class="form-label">Posto</label>
+            <input type="text" id="seat" name="seat" class="form-control" placeholder="Esempio: A5" required>
+          </div>
+          <div class="col-md-4 d-flex align-items-end">
+            <button type="submit" class="btn btn-success w-100">Prenota</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Storico Prenotazioni -->
+    <div class="mt-5">
+      <h3>Storico Prenotazioni</h3>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Film</th>
+            <th>Posto</th>
+            <th>Data Prenotazione</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for reservation in reservations %}
+          <tr>
+            <td>{{ reservation.film_title }}</td>
+            <td>{{ reservation.seat }}</td>
+            <td>{{ reservation.date }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+{% endblock %}
+     

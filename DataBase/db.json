@@ -1,0 +1,652 @@
+
+    [
+      {
+        "id": 1,
+        "title": "Adagio",
+        "director": "Stefano Sollima",
+        "genre": ["Poliziesco", "Drammatico"],
+        "year": 2023,
+        "actors": [
+          "Pierfrancesco Favino",
+          "Toni Servillo",
+          "Adriano Giannini",
+          "Valerio Mastandrea",
+          "Gianmarco Franchini",
+          "Francesco Di Leva",
+          "Lorenzo Adorni",
+          "Silvia Salvatori"
+        ],
+        "release_date": "2023-12-14",
+        "duration_minutes": 127,
+        "distribution": "Vision Distribution",
+        "synopsis": "Adagio è un film di genere poliziesco, drammatico del 2023, diretto da Stefano Sollima, con Pierfrancesco Favino e Toni Servillo. Uscita al cinema il 14 dicembre 2023. Durata 127 minuti.",
+        "trailer_url": "https://www.youtube.com/watch?v=B2JKYmVnLOo&ab_channel=VisionDistribution",
+        "poster_url": "../static/img/film/adagio.jpeg",
+        "screenings": [
+          {
+            "date": "2025-01-31",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              },
+              {
+                "cinema": "Parma Cinema",
+                "room": "Sala 7"
+              }
+            ]
+          },
+          {
+            "date": "2025-02-01",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              }
+            ]
+          },
+          {
+            "date": "2024-02-01",
+            "locations": [
+              {
+                "cinema": "Parma Cinema",
+                "room": "Sala 7"
+              }
+            ]
+          }
+        ]
+      },
+
+      {
+      "id": 2,
+      "title": "Aquaman e il Regno Perduto",
+      "director": "James Wan",
+      "genre": ["Azione", "Fantascienza"],
+      "year": 2023,
+      "actors": [
+        "Jason Momoa",
+        "Patrick Wilson",
+        "Amber Heard",
+        "Yahya Abdul-Mateen II",
+        "Nicole Kidman",
+        "Temuera Morrison",
+        "Dolph Lundgren",
+        "Randall Park",
+        "Vincent Regan",
+        "Pilou Asbæk",
+        "Indya Moore"
+      ],
+      "release_date": "2023-12-20",
+      "duration_minutes": 115,
+      "distribution": "Warner Bros.",
+      "synopsis": "Aquaman e il Regno Perduto è un film di genere azione, fantascienza del 2023, diretto da James Wan, con Jason Momoa e Patrick Wilson. Uscita al cinema il 20 dicembre 2023. Durata 115 minuti.",
+      "trailer_url": "https://www.youtube.com/watch?v=tVlr_GLrQ4M&ab_channel=UniversalPicturesInternationalItaly",
+      "poster_url": "../static/img/film/aquaman.jpg",
+      "screenings": [
+        {
+          "date": "2024-01-31",
+          "locations": [
+            {
+              "cinema": "Cremona Po",
+              "room": "Sala 7"
+            },
+            {
+              "cinema": "Parma Cinema",
+              "room": "Sala 7"
+            }
+          ]
+        },
+        {
+          "date": "2024-02-01",
+          "locations": [
+            {
+              "cinema": "Cremona Po",
+              "room": "Sala 7"
+            }
+          ]
+        },
+        {
+          "date": "2024-02-01",
+          "locations": [
+            {
+              "cinema": "Parma Cinema",
+              "room": "Sala 7"
+            }
+          ]
+        }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Ferrari",
+        "director": "Michael Mann",
+        "genre": ["Biografico", "Drammatico"],
+        "year": 2023,
+        "actors": [
+          "Adam Driver",
+          "Penélope Cruz",
+          "Shailene Woodley",
+          "Patrick Dempsey",
+          "Michele Savoia",
+          "Jack O'Connell",
+          "Sarah Gadon",
+          "Gabriel Leone",
+          "Valentina Bellè",
+          "Brett Smrz",
+          "Erik Haugen",
+          "Tommaso Basili",
+          "Lino Musella",
+          "Giuseppe Bonifati",
+          "Andrea Dolente",
+          "Samuel Hubinette",
+          "Leonardo Caimi",
+          "Andrea Bruschi",
+          "Giuseppe Attanasio"
+        ],
+        "release_date": "2023-12-14",
+        "duration_minutes": 130,
+        "distribution": "01 Distribution",
+        "synopsis": "Ferrari è un film di genere biografico, drammatico del 2023, diretto da Michael Mann, con Adam Driver e Penélope Cruz. Uscita al cinema il 14 dicembre 2023. Durata 130 minuti.",
+        "trailer_url": "https://www.youtube.com/watch?v=8oOVNMjM1Jk&ab_channel=NEON",
+        "poster_url": "../static/img/film/ferrari.jpg",
+        "screenings": [
+          {
+            "date": "2025-01-31",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              },
+              {
+                "cinema": "Parma Cinema",
+                "room": "Sala 7"
+              }
+            ]
+          },
+          {
+            "date": "2025-02-01",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Foglie al vento",
+        "director": "Aki Kaurismäki",
+        "genre": ["Commedia", "Drammatico"],
+        "year": 2023,
+        "actors": [
+            "Alma Pöysti",
+            "Jussi Vatanen",
+            "Laure Calamy",
+            "Vincent Elbaz",
+            "Jonathan Darona",
+            "Christophe Grundmann"
+        ],
+        "release_date": "2023-12-21",
+        "duration_minutes": 81,
+        "distribution": "Lucky Red in collaborazione con BIM distribuzioni",
+        "synopsis": "Foglie al Vento è un film di genere commedia, drammatico del 2023, diretto da Aki Kaurismäki, con Alma Pöysti e Jussi Vatanen. Uscita al cinema il 21 dicembre 2023. Durata 81 minuti.",
+        "trailer_url": "https://www.youtube.com/watch?v=bPqhSe46AUI&ab_channel=FilmIsNowTrailerItalia",
+        "poster_url": "../static/img/film/foglie_al_vento.jpeg",
+        "screenings": [
+            {
+                "date": "2025-01-31",
+                "locations": [
+                    {
+                        "cinema": "Cremona Po",
+                        "room": "Sala 7"
+                    },
+                    {
+                        "cinema": "Parma Cinema",
+                        "room": "Sala 7"
+                    }
+                ]
+            },
+            {
+                "date": "2025-02-01",
+                "locations": [
+                    {
+                        "cinema": "Cremona Po",
+                        "room": "Sala 7"
+                    }
+                ]
+            }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Napoleon",
+        "director": "Ridley Scott",
+        "genre": ["Azione", "Biografico", "Storico", "Guerra"],
+        "year": 2023,
+        "actors": [
+          "Joaquin Phoenix",
+          "Vanessa Kirby",
+          "Tahar Rahim",
+          "Ben Miles",
+          "Ludivine Sagnier",
+          "Ian McNeice",
+          "John Hollingworth",
+          "Paul Rhys",
+          "Matthew Needham",
+          "Benjamin Chivers",
+          "Jonathan Barnwell",
+          "Youssef Kerkour",
+          "Scott Handy",
+          "Phil Cornwell",
+          "Gavin Spokes",
+          "David Verrey",
+          "Sam Crane",
+          "Edouard Philipponnat",
+          "Harry Taurasi",
+          "Thom Ashley",
+          "Mamie Barry",
+          "Tim Faulkner",
+          "John Hodgkinson"
+        ],
+        "release_date": "2023-11-23",
+        "duration_minutes": 158,
+        "distribution": "Eagle Pictures",
+        "synopsis": "Napoleon è un film di genere azione, biografico, storico, guerra del 2023, diretto da Ridley Scott, con Joaquin Phoenix e Vanessa Kirby. Uscita al cinema il 23 novembre 2023. Durata 158 minuti. Distribuito da Eagle Pictures.",
+        "trailer_url": "https://www.youtube.com/watch?v=rztd9Kw_D1I&ab_channel=SonyPicturesItalia",
+        "poster_url": "../static/img/film/napolion.jpg",
+        "screenings": [
+          {
+            "date": "2025-01-31",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              },
+              {
+                "cinema": "Parma Cinema",
+                "room": "Sala 7"
+              }
+            ]
+          },
+          {
+            "date": "2025-02-01",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              }
+            ]
+          },
+          {
+            "date": "2024-02-01",
+            "locations": [
+              {
+                "cinema": "Parma Cinema",
+                "room": "Sala 7"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "One Life",
+        "director": "James Hawes",
+        "genre": ["Drammatico", "Biografico"],
+        "year": 2023,
+        "actors": [
+          "Elizabeth Banks",
+          "Awkwafina",
+          "Danny DeVito",
+          "Carol Kane",
+          "Keegan Michael Key",
+          "Kumail Nanjiani",
+          "David Mitchell"
+        ],
+        "release_date": "2023-12-21",
+        "duration_minutes": 110,
+        "distribution": "Eagle Pictures",
+        "synopsis": "One Life è un film di genere drammatico, biografico del 2023, diretto da James Hawes, con Anthony Hopkins e Helena Bonham Carter. Uscita al cinema il 21 dicembre 2023. Durata 110 minuti.",
+        "trailer_url": "https://www.youtube.com/watch?v=Gt934__a7K8&ab_channel=EaglePictures",
+        "poster_url": "../static/img/film/one_life.jpg",
+        "screenings": [
+          {
+            "date": "2025-01-31",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              },
+              {
+                "cinema": "Parma Cinema",
+                "room": "Sala 7"
+              }
+            ]
+          },
+          {
+            "date": "2025-02-01",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              }
+            ]
+          },
+          {
+            "date": "2024-02-01",
+            "locations": [
+              {
+                "cinema": "Parma Cinema",
+                "room": "Sala 7"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Perfect Days",
+        "director": "Wim Wenders",
+        "genre": ["Drammatico"],
+        "year": 2023,
+        "actors": [
+          "Kôji Yakusho",
+          "Min Tanaka",
+          "Tokio Emoto",
+          "Aoi Yamada",
+          "Sayuri Ishikawa",
+          "Arisa Nakano",
+          "Yumi Asô",
+          "Tomokazu Miura"
+        ],
+        "release_date": "2023-12-21",
+        "duration_minutes": 124,
+        "distribution": "Lucky Red",
+        "synopsis": "Perfect Days è un film di genere drammatico del 2023, diretto da Wim Wenders, con Kôji Yakusho e Min Tanaka. Uscita al cinema il 04 gennaio 2024. Durata 124 minuti.",
+        "trailer_url": "https://www.youtube.com/watch?v=PUAaGSqiN-c&ab_channel=FilmIsNowTrailerItalia",
+        "poster_url": "../static/img/film/Perfect_days.jpg",
+        "screenings": [
+          {
+            "date": "2025-01-31",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              },
+              {
+                "cinema": "Parma Cinema",
+                "room": "Sala 7"
+              }
+            ]
+          },
+          {
+            "date": "2025-02-01",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              }
+            ]
+          },
+          {
+            "date": "2024-02-01",
+            "locations": [
+              {
+                "cinema": "Parma Cinema",
+                "room": "Sala 7"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Come può uno scoglio",
+        "director": "Gennaro Nunziante",
+        "genre": ["Commedia"],
+        "year": 2023,
+        "actors": [
+          "Amedeo Grieco",
+          "Pio D'Antini",
+          "Francesca Valtorta",
+          "Nicola Rignanese",
+          "Claudio Bigagli",
+          "Christina Andrea Rosamilla"
+        ],
+        "release_date": "2023-12-28",
+        "duration_minutes": 130,
+        "distribution": "Vision Distribution",
+        "synopsis": "Come può uno scoglio è un film di genere commedia del 2023, diretto da Gennaro Nunziante, con Amedeo Grieco e Pio D'Antini. Uscita al cinema il 28 dicembre 2023. Distribuito da Vision Distribution.",
+        "trailer_url": "https://www.youtube.com/watch?v=HhC-FqwKS7Q&ab_channel=VisionDistribution",
+        "poster_url": "../static/img/film/pio_e_amedeo.jpg",
+        "screenings": [
+          {
+            "date": "2024-01-31",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              },
+              {
+                "cinema": "Parma Cinema",
+                "room": "Sala 7"
+              }
+            ]
+          },
+          {
+            "date": "2024-02-01",
+            "locations": [
+              {
+                "cinema": "Parma Cinema",
+                "room": "Sala 7"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Prendi il volo",
+        "director": "Benjamin Renner",
+        "genre": ["Animazione", "Avventura", "Commedia"],
+        "year": 2023,
+        "actors": [
+          "Elizabeth Banks",
+          "Awkwafina",
+          "Danny DeVito",
+          "Carol Kane",
+          "Keegan Michael Key",
+          "Kumail Nanjiani",
+          "David Mitchell"
+        ],
+        "release_date": "2023-12-07",
+        "duration_minutes": 81,
+        "distribution": "Universal Pictures International Italy",
+        "synopsis": "Prendi Il Volo è un film di genere animazione, avventura, commedia del 2023, diretto da Benjamin Renner, con Elizabeth Banks e Awkwafina. Uscita al cinema il 07 dicembre 2023. Distribuito da Universal Pictures International Italy.",
+        "trailer_url": "https://www.youtube.com/watch?v=tVlr_GLrQ4M&ab_channel=UniversalPicturesInternationalItaly",
+        "poster_url": "../static/img/film/Prendi_il_volo.jpg",
+        "screenings": [
+          {
+            "date": "2025-01-31",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              },
+              {
+                "cinema": "Parma Cinema",
+                "room": "Sala 7"
+              }
+            ]
+          },
+          {
+            "date": "2025-02-01",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Tutti a parte mio marito",
+        "director": "Caroline Vignal",
+        "genre": ["Commedia", "Drammatico", "Sentimentale"],
+        "year": 2023,
+        "actors": [
+          "Laure Calamy",
+          "Vincent Elbaz",
+          "Jonathan Darona",
+          "Christophe Grundmann"
+        ],
+        "release_date": "2023-12-21",
+        "duration_minutes": 116,
+        "distribution": "I Wonder Pictures",
+        "synopsis": "Tutti a parte mio marito è un film di genere commedia, drammatico, sentimentale del 2023, diretto da Caroline Vignal, con Laure Calamy e Vincent Elbaz. Uscita al cinema il 21 dicembre 2023. Distribuito da I Wonder Pictures.",
+        "trailer_url": "https://www.youtube.com/watch?v=to4KG6C_tWQ&ab_channel=IWonderPictures",
+        "poster_url": "../static/img/film/tutti_a_parte_mio_marito.jpeg",
+        "screenings": [
+          {
+            "date": "2025-01-31",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              },
+              {
+                "cinema": "Parma Cinema",
+                "room": "Sala 7"
+              }
+            ]
+          },
+          {
+            "date": "2025-02-01",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "title": "Wish",
+        "director": "Chris Buck, Fawn Veerasunthorn",
+        "genre": ["Animazione", "Avventura", "Commedia", "Family"],
+        "year": 2023,
+        "actors": [
+          "Amadeus",
+          "Michele Riondino",
+          "Gaia Gozzi",
+          "Ariana DeBose",
+          "Alan Tudyk",
+          "Chris Pine",
+          "Evan Peters"
+        ],
+        "release_date": "2023-12-21",
+        "duration_minutes": 92,
+        "distribution": "The Walt Disney Company Italia",
+        "synopsis": "Wish è un film di genere animazione, avventura, family del 2023, diretto da Chris Buck e Fawn Veerasunthorn. Uscita al cinema il 21 dicembre 2023. Durata 92 minuti.",
+        "trailer_url": "https://www.youtube.com/watch?v=U_ENaaZYIaE&ab_channel=DisneyIT",
+        "poster_url": "../static/img/film/wish.jpeg",
+        "screenings": [
+          {
+            "date": "2024-01-31",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              },
+              {
+                "cinema": "Parma Cinema",
+                "room": "Sala 7"
+              }
+            ]
+          },
+          {
+            "date": "2024-02-01",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 12  ,
+        "title": "Wonka",
+        "director": "Paul King",
+        "genre": ["Commedia", "Avventura"],
+        "year": 2023,
+        "actors": [
+          "Timothée Chalamet",
+          "Calah Lane",
+          "Hugh Grant",
+          "Keegan Michael Key",
+          "Paterson Joseph",
+          "Matt Lucas",
+          "Mathew Baynton",
+          "Olivia Colman",
+          "Sally Hawkins",
+          "Rowan Atkinson",
+          "Jim Carter",
+          "Natasha Rothwell",
+          "Richard Fulcher",
+          "Rakhee Thakrar",
+          "Tom Davis",
+          "Kobna Holdbrook-Smith",
+          "Simon Farnaby"
+        ],
+        "release_date": "2023-12-14",
+        "duration_minutes": 116,
+        "distribution": "Warner Bros. Pictures",
+        "synopsis": "Wonka è un film di genere commedia, avventura del 2023, diretto da Paul King, con Timothée Chalamet e Calah Lane. Uscita al cinema il 14 dicembre 2023. Durata 116 minuti.",
+        "trailer_url": "https://www.youtube.com/watch?v=S0cbkpi1ogc&ab_channel=WarnerBros.Italia",
+        "poster_url": "../static/img/film/wonka.jpg",
+        "screenings": [
+          {
+            "date": "2025-01-31",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              },
+              {
+                "cinema": "Parma Cinema",
+                "room": "Sala 7"
+              }
+            ]
+          },
+          {
+            "date": "2025-02-01",
+            "locations": [
+              {
+                "cinema": "Cremona Po",
+                "room": "Sala 7"
+              }
+            ]
+          },
+          {
+            "date": "2024-02-01",
+            "locations": [
+              {
+                "cinema": "Parma Cinema",
+                "room": "Sala 7"
+              }
+            ]
+          }
+        ]
+      }
+
+
+    ]
+  
