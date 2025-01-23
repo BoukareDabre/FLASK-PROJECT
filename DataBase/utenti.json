@@ -11,6 +11,21 @@
             "Reservation1",
             "Reservation2"
         ],
-        "role": "user"
+        "role": "user",
+        "user_since": "2001-09-11"
+    },
+    {
+        "id_user": 2,
+        "name_user": "banana",
+        "mail": "fdfsdf@fdsf.com",
+        "password": "6d350a2155acf0c0cd7dcbaab0c9587520a59e5da467948d0a568f4a61c0f7a0",
+        "phone_number": "3332224444",
+        "Profileimage_url": "https://example.com/buba.jpg",
+        "reservations": [
+            "Reservation1",
+            "Reservation2"
+        ],
+        "role": "user",
+        "user_since": "2025-01-24"
     }
 ]
