@@ -17,7 +17,7 @@
    
     <div class="navbar navbar-expand-sm bg-dark mb-5 border-bottom border-body"  data-bs-theme="dark" >
       <div class="container-fluid">
-        <div class="navbar-brand" href="#">
+        <div class="navbar-brand" href="#" id="logo">
           <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo" width="90" height="90" >
         </div>
         
@@ -25,7 +25,7 @@
         <div class="collapse navbar-collapse text-center" id="animazione">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link " href="#">Film</a>
+              <a class="nav-link " href="/">Film</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/story_cinema">Storia</a>
@@ -33,18 +33,11 @@
             <li class="nav-item">
               <a class="nav-link" href="/luogo_cinema">Luogo</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/registration">Registration</a>
-            </li>
-            <div class="separatore"></div>
           </ul>
           <div class="collapse navbar-collapse" id="log">
             <ul class="navbar-nav"> 
               <li class="nav-item">
-                <a class="nav-link" href="/registration?tipo=L">Accedi</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/registration?tipo=S">Registrati</a>
+                <a class="nav-link" href="/registration?tipo=L">Log-in</a>
               </li>
             </ul>
           </div>
@@ -73,14 +66,14 @@
     </nav>
     <div >
         <div class=" mt-5">
-            <div class="container mb-1">
+            <div class="container mb-1" id="programming">
               <a class="navbar-brand" href="#">
                 <img src="../static/img/icone/white-black/movie-theater_11908347.png" alt="Logo" width="25" height="25" class="d-inline-block align-text-top">
-                Programmazione
+                Programming
               </a>
             </div>
-            <div style="margin-left: 9%;">
-              <p class="font-monospace  ml-5">Questi sono i nostri film in sala</p>
+            <div style="margin-left: 9%;" id="subp">
+              <p class="font-monospace  ml-5">These are our movies currently in theaters</p>
             </div>
 
             <div id="carouselExample" class="carousel slide mb-5" >
@@ -88,36 +81,36 @@
             
                 <div class="carousel-item active">
                   <div class="cards-wrapper ">
-                    <div class="card  h-100 card_stile0" style="width: 18rem;">
+                    <div class="card  h-100 card_stile0" >
                       
-                        <a href="/film?id=9"><img src="../static/img/film/Prendi_il_volo.jpg" class="card-img-top" alt="Prendi_il_volo" width="150px" height="400px"></a>
+                        <a href="/film?id=9"><img src="../static/img/film/Prendi_il_volo.jpg" class="card-img-top" alt="Prendi_il_volo" ></a>
                       
                       <div class="card-body" style="padding-bottom: 0%;">
                         <p class="card-text"><strong>PRENDI_IL_VOLO</strong><p></p>
                       </div>
                     </div>
             
-                    <div class="card card_stile0" style="width: 18rem;">
+                    <div class="card card_stile0" >
                       <a href="/film?id=11">
-                        <img src="../static/img/film/wish.jpeg" class="card-img-top" alt="wish" width="150px" height="400px">
+                        <img src="../static/img/film/wish.jpeg" class="card-img-top" alt="wish" >
                       </a>
                       <div class="card-body">
                         <p class="card-text"><strong>WISH</strong></p>
                       </div>
                     </div>
                     
-                    <div class="card card_stile0" style="width: 18rem;">
+                    <div class="card card_stile0" >
                       <a href="/film?id=1">
-                        <img src="../static/img/film/adagio.jpeg" class="card-img-top" alt="adagio" width="150px" height="400px">
+                        <img src="../static/img/film/adagio.jpeg" class="card-img-top" alt="adagio" >
                       </a>
                       <div class="card-body">
                         <p class="card-text"><strong>ADAGIO</strong></p>
                       </div>
                     </div>
                     
-                    <div class="card card_stile0" style="width: 18rem;">
+                    <div class="card card_stile0" >
                       <a href="/film?id=6">
-                        <img src="../static/img/film/one_life.jpg" class="card-img-top" alt="one life" width="150px" height="400px">
+                        <img src="../static/img/film/one_life.jpg" class="card-img-top" alt="one life" >
                       </a>
                       <div class="card-body">
                         <p class="card-text"><strong>ONE LIFE</strong></p>
@@ -129,27 +122,27 @@
             
                 <div class="carousel-item ">
                   <div class="cards-wrapper ">
-                    <div class="card card_stile0" style="width: 18rem;">
+                    <div class="card card_stile0" >
                       
-                        <a href="/film?id=2"><img src="../static/img/film/aquaman.jpg" class="card-img-top" alt="aquaman" width="150px" height="400px"></a>
+                        <a href="/film?id=2"><img src="../static/img/film/aquaman.jpg" class="card-img-top" alt="aquaman" ></a>
                       
                       <div class="card-body">
                         <p class="card-text"><strong>AQUAMAN</strong></p>
                       </div>
                     </div>
             
-                    <div class="card card_stile0" style="width: 18rem;">
+                    <div class="card card_stile0" >
                       
-                        <a href="/film?id=5"><img src="../static/img/film/napolion.jpg" class="card-img-top" alt="napolion" width="150px" height="400px"></a>
+                        <a href="/film?id=5"><img src="../static/img/film/napolion.jpg" class="card-img-top" alt="napolion" ></a>
                       
                       <div class="card-body">
                         <p class="card-text"><strong>NAPOLION</strong></p>
                       </div>
                     </div>
             
-                    <div class="card card_stile0" style="width: 18rem;">
+                    <div class="card card_stile0" >
                       
-                        <a href="/film?id=3"><img src="../static/img/film/ferrari.jpg" class="card-img-top" alt="ferrari" width="150px" height="400px"></a>
+                        <a href="/film?id=3"><img src="../static/img/film/ferrari.jpg" class="card-img-top" alt="ferrari" ></a>
                       
                       <div class="card-body">
                         <p class="card-text"><strong>FERRARI</strong></p>
@@ -159,7 +152,7 @@
                     </div>
                     <div class="card card_stile0" style="width: 18rem; ">
                       
-                      <a href="/film?id=8"><img src="../static/img/film/pio_e_amedeo.jpg" class="card-img-top" alt="foglie_al_vento" width="150px" height="400px"></a>
+                      <a href="/film?id=8"><img src="../static/img/film/pio_e_amedeo.jpg" class="card-img-top" alt="foglie_al_vento" ></a>
                     
                     <div class="card-body" style="border: none;">
                       <p class="card-text"><strong>PIO E AMEDEO</strong></p>
@@ -170,18 +163,18 @@
             
                 <div class="carousel-item ">
                   <div class="cards-wrapper ">
-                    <div class="card card_stile0" style="width: 18rem;">
+                    <div class="card card_stile0" >
                       
-                        <a href="/film?id=12"><img src="../static/img/film/wonka.jpg" class="card-img-top" alt="wonka" width="150px" height="400px"></a>
+                        <a href="/film?id=12"><img src="../static/img/film/wonka.jpg" class="card-img-top" alt="wonka" ></a>
                       
                       <div class="card-body">
                         <p class="card-text"><strong>WONKA</strong></p>
                       </div>
                     </div>
             
-                    <div class="card card_stile0" style="width: 18rem;">
+                    <div class="card card_stile0" >
                       
-                        <a href="/film?id=10"><img src="../static/img/film/tutti_a_parte_mio_marito.jpeg" class="card-img-top" alt="tutti_a_parte_mio_marito" width="150px" height="400px"></a>
+                        <a href="/film?id=10"><img src="../static/img/film/tutti_a_parte_mio_marito.jpeg" class="card-img-top" alt="tutti_a_parte_mio_marito" ></a>
                       
                       <div class="card-body">
                         <p class="card-text"><strong>TUTTI_A_PARTE_MIO_MARITO</strong></p>
@@ -190,7 +183,7 @@
             
                     <div class="card card_stile0" style="width: 18rem; ">
                       
-                        <a href="/film?id=4"><img src="../static/img/film/foglie_al_vento.jpeg" class="card-img-top" alt="foglie_al_vento" width="150px" height="400px"  ></a>
+                        <a href="/film?id=4"><img src="../static/img/film/foglie_al_vento.jpeg" class="card-img-top" alt="foglie_al_vento"   ></a>
                       
                       <div class="card-body" style="border: none;">
                         <p class="card-text"><strong>FOGLIE_AL_VENTO</strong></p>
@@ -199,7 +192,7 @@
 
                     <div class="card card_stile0" style="width: 18rem; ">
                       
-                      <a href="/film?id=7"><img src="../static/img/film/Perfect_days.jpg" class="card-img-top" alt="foglie_al_vento" width="150px" height="400px"  ></a>
+                      <a href="/film?id=7"><img src="../static/img/film/Perfect_days.jpg" class="card-img-top" alt="foglie_al_vento"   ></a>
                     
                     <div class="card-body" style="border: none;">
                       <p class="card-text"><strong>PERFET DAYS</strong></p>
@@ -222,14 +215,14 @@
         </div>
 
 
-        <div class="container mb-1 mt-5">
+        <div class="container mb-1 mt-5" id="miglioriFilm">
           <a class="navbar-brand" href="#">
             <img src="../static/img/icone/white-black/movie-star_1456703.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-            Migliori film da quardare
+            Best movies to watch
           </a>
         </div>
-        <div class="container " style="margin-left: 9%;">
-          <p class="font-monospace  ml-5">Segli uno di questi film da goderti al nostro cinema</p>
+        <div class="container " style="margin-left: 9%;" id="subp2">
+          <p class="font-monospace  ml-5">Choose one of these films to enjoy at our cinema</p>
         </div>
 
         <div class="container">
@@ -241,7 +234,8 @@
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title">Killers of the Flower Moon</h5>
-                  <p class="card-text"  style="font-size: 13px;">Killers of the Flower Moon è un film di genere Drammatico, Storico, Poliziesco, Giallo, Thriller, Western del 2023 diretto da Martin Scorsese con Leonardo DiCaprio e Robert De Niro. Distribuito in Italia da 01 Distribution. Paese di produzione: USA.</p>
+                  <p class="card-text">Killers of the Flower Moon is a 2023 drama, historical, crime, mystery, thriller, and western film directed by Martin Scorsese, starring Leonardo DiCaprio and Robert De Niro. Distributed in Italy by 01 Distribution. Country of production: USA.
+                  </p>
                   
                 </div>
               </div>
@@ -256,7 +250,8 @@
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title">Oppenheimer</h5>
-                  <p class="card-text"  style="font-size: 13px;">Oppenheimer è un film di genere Drammatico, Storico del 2023 diretto da Christopher Nolan con Cillian Murphy e Kenneth Branagh. Distribuito in Italia da Universal Pictures. Paese di produzione: USA, Regno Unito.</p>
+                  <p class="card-text">Oppenheimer is a 2023 historical drama film directed by Christopher Nolan, starring Cillian Murphy and Kenneth Branagh. Distributed in Italy by Universal Pictures. Country of production: USA, United Kingdom.
+                  </p>
                   
                 </div>
               </div>
@@ -271,7 +266,8 @@
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title">Past Lives</h5>
-                  <p class="card-text"  style="font-size: 13px;">Past Lives è un film di genere Drammatico, Romantico del 2023 diretto da Celine Song con Greta Lee e Yoo Teo . Durata: 106 min. Distribuito in Italia da Lucky Red. Paese di produzione: USA, Corea del Sud.</p>
+                  <p class="card-text">Past Lives is a 2023 drama and romance film directed by Celine Song, starring Greta Lee and Yoo Teo. Duration: 106 minutes. Distributed in Italy by Lucky Red. Country of production: USA, South Korea.
+                  </p>
                  
                 </div>
               </div>
@@ -286,7 +282,8 @@
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title">Santocielo</h5>
-                  <p class="card-text" style="font-size: 13px;">Santocielo è un film di genere Commedia del 2023 diretto da Francesco Amato con Ficarra e Picone. Uscita al cinema: 14 Dicembre 2023. Durata: 120 min. Distribuito in Italia da Medusa. Paese di produzione: Italia.</p>
+                  <p class="card-text">
+                    Santocielo is a 2023 comedy film directed by Francesco Amato, starring Ficarra and Picone. Release date in cinemas: December 14, 2023. Duration: 120 minutes. Distributed in Italy by Medusa. Country of production: Italy.</p>
                   
                 </div>
               </div>
@@ -302,18 +299,18 @@
       
      
     </div>
-    <div class="container"    style="margin-top:40%;">
+    <div class="container"    style="margin-top:40%;" id="bomboclat">
       <div class="container mb-1 mt-5">
         <a class="navbar-brand" href="#">
           <img src="../static/img/icone/white-black/coming-soon_5229373.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
           Prossimamente
         </a>
       </div>
-      <div style="margin-left: 4%;">
+      <div style="margin-left: 4%;" >
         <p class="font-monospace  ml-5">I migliori film in uscita nel 2024</p>
       </div>
     </div>
-    <div>
+    <div id="carosello2">
       <div class="contenitore_carosel ">
         <div style="width: 40%; margin-right: 30%;margin-top: 20%;">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit provident quasi vitae aperiam. Vitae, voluptatibus at aliquid amet et accusantium, id saepe in similique sit tempora blanditiis excepturi dolore laudantium!</p>
@@ -349,7 +346,7 @@
 
     <div style="clear: both;">
       
-      <div class="nav justify-content-center bg-dark pt-5">
+      <div class="nav justify-content-center bg-dark pt-5" id="footer">
         
         <img src="{{ url_for('static', filename='img/icone/cinema_1655698.png') }}" alt="cinema_logo" width="300" height="300" style="margin-right: 80px;">
         

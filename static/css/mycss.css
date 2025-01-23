@@ -85,10 +85,15 @@
   }
   .card_stile0{
     max-width: 540px;
+    width: 18rem;
     border: none;
     background-color: #273C4D;
     color: white; padding: 10px;
 
+  }
+  .card_stile0 img{
+    width: "150px";
+    height: "400px";
   }
   .img-stile{
     border: none;
@@ -97,42 +102,128 @@
     padding: 10px;
     border-radius: 5px;
   }
-  
+  #log{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+  }
   @media (max-width: 1440px) {
     #logo{
-      width: 10%;
+      width: 20%;
+    }
+    #logo img{
+      width: 250px;
+      height: 250px;
     }
     #animazione{
-      margin-left: -0%;
+      margin-left: 0%;
     }
-    #animazione li{
-      font-size: 25px;
-    }
-    .separatore{
-      width: 0.1px;
-      background-color:#495057;
-      height: 70px;
-      margin: 0 15px;
-      margin-top: 5px;
+    #animazione li, #log li{
+      font-size: 40px;
     }
     .navbar-nav{
       margin-top: 2%;
-      float: left;
     }
     #log{
       display: flex;
-      justify-content: flex-start;
-      width: 100%;
-      margin-right: 0;
+      justify-content: flex-end;
+      margin-right: 10%;
     }
     .navbar-collapse{
       width: 100%;
     }
-    #log ul{
-      display: flex;
-      flex-direction: column;
-    }
     #imgs-inizio{
+      display: none;
+    }
+    #programming{
+      width: 30%;
+      text-align: center;
+    }
+    #programming img{
+      height: 70px;
+      width: 70px;
+    }
+    #programming a{
+      font-size: 60px;
+    }
+    #subp{
+      width: 100%;
+      margin-top: 2%;
+    }
+    #subp p{
+      font-size: 45px;
+    }
+    #miglioriFilm{
+      width: 50%;
+      text-align: center;
+      margin-top: 2%;
+    }
+    #miglioriFilm img{
+      height: 70px;
+      width: 70px;
+    }
+    #miglioriFilm a{
+      font-size: 60px;
+    }
+    #subp2{
+      width: 100%;
+      margin-top: 2%;
+    }
+    #subp2 p{
+      font-size: 45px;
+    }
+    .card_stile0{
+      max-width: 100%;
+      width: 100%;
+      border: none;
+      background-color: #273C4D;
+      color: white; padding: 10px;
+  
+    }
+    .card_stile0 img{
+      width: 100%;
+      height: 100%;
+    }
+    .card_stile1{
+      margin-top: 2%;
+      max-width: 100%;
+      width: 100%;
+      border: none;
+      background-color: #273C4D;
+      color: white; padding: 10px;
+    }
+    .card_stile2{
+      margin-top: 2%;
+      max-width: 100%;
+      width: 100%;
+      border: none;
+      background-color: #273C4D;
+      color: white; padding: 10px;
+    }
+    .card_stile1 img{
+      width: 400px;
+      height: 600px;
+    }
+    .card_stile2 img{
+      width: 400px;
+      height: 600px;
+    }
+    .card-title{
+      font-size: 70px;
+    }
+    .card-title{
+      font-size: 70px;
+    }
+    .card_stile1 p{
+      font-size: 50px;
+    }
+    .card_stile2 p{
+      font-size: 50px;
+    }
+    #bomboclat{
+      display: none;
+    }
+    #carosello2{
       display: none;
     }
   }
