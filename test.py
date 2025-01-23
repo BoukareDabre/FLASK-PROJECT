@@ -1,5 +1,6 @@
-import json, os, random, json
+import json, os, random, json, hashlib
 from flask import Flask, request, render_template, redirect
+from datetime import datetime
 
 template_dir = os.path.abspath('./Templates')
 app = Flask(__name__,template_folder=template_dir)
@@ -266,11 +267,12 @@ def user():
             "id_user": users[-1]["id_user"] + 1 if users else 1,
             "name_user": request.form.get('name'),
             "mail": request.form.get('email'),
-            "password": request.form.get('password'),
+            "password": (hashlib.sha256(request.form.get('password').encode())).hexdigest(),
             "phone_number": request.form.get('phone'),
             "Profileimage_url": "https://example.com/buba.jpg", 
             "reservations": ["Reservation1", "Reservation2"], 
-            "role": "user"            
+            "role": "user",            
+            "user_since": datetime.now().strftime('%Y-%m-%d')
         }
 
 
@@ -287,7 +289,7 @@ def user():
 
         name = request.form.get('name')
         email = request.form.get('email')
-        password = request.form.get('password')
+        password = (hashlib.sha256(request.form.get('password').encode())).hexdigest()
 
         old_user = None
         for u in users:
