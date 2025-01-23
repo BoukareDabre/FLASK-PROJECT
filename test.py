@@ -125,8 +125,6 @@ def film():
     # Passa il film trovato alla template
     return render_template('base_film.html', film_ricercato=film_selezionato)
 
-<<<<<<< HEAD
-=======
 class User:
     def __init__(
         self,
@@ -135,6 +133,8 @@ class User:
         mail: str,
         password: str,
         phone_number: str,
+        data_member: str,
+        Profileimage_url: str,
         role: str       
     ):
         self.id_user = id_user
@@ -162,6 +162,33 @@ class User:
         def get_role(self):
             return self.role
 
+DB = "./DataBase/utenti.json"
+
+@app.route('/account')
+def utenti():
+    id_user = request.args.get('id')
+    with open(DB, "r") as file:
+        dizionario_user = json.load(file)
+    film_list = []
+   
+    for jsonFile in dizionario_user:
+        user = User(int(jsonFile['id']), 
+                    jsonFile['title'], 
+                    jsonFile['director'], 
+                    jsonFile['genre'], 
+                    jsonFile['year'], 
+                    jsonFile['actors'], 
+                    jsonFile['release_date'], 
+                    jsonFile['duration_minutes'], 
+                    jsonFile['distribution'], 
+                    jsonFile['synopsis'], 
+                    jsonFile['trailer_url'], 
+                    jsonFile['poster_url'], 
+                    jsonFile['screenings'])
+
+        film_list.append(film)
+
+    return render_template('account.html')
 
 
 
