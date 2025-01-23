@@ -97,7 +97,11 @@
     padding: 10px;
     border-radius: 5px;
   }
-  
+  #log{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+  }
   @media (max-width: 1440px) {
     #logo{
       width: 10%;
