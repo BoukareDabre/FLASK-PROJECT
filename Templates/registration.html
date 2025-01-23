@@ -116,7 +116,9 @@
               <input type="checkbox" class="form-check-input" id="exampleCheck1 ">
               <label class="form-check-label" for="exampleCheck1" style="font-size: 15px;">Remember</label>
             </div>-->
-            <a href="#"><button type="submit" class="btn btn-dark mb-3" style=" width: 90%;text-align: center; margin-left: 5%; border-radius: 20px;">{% if tipo == "S" %}Sign in{% else %}Login{% endif %}</button></a>
+            <a href="#" onclick="redirectToAccount()">
+              <button type="submit" class="btn btn-dark mb-3" style=" width: 90%;text-align: center; margin-left: 5%; border-radius: 20px;">{% if tipo == "S" %}Sign in{% else %}Login{% endif %}</button>
+            </a>
             
             <p class="d-inline" style="margin-left: 28%;">
               {% if tipo == "S" %}
@@ -205,6 +207,13 @@
           // Blocca la sottomissione del form se non valido
           if (!isValid) 
               e.preventDefault();
+      }
+
+
+      function redirectToAccount() {
+        var email = document.getElementById('email').value.trim(); // Prendi l'email
+        var url = '/account?email=' + encodeURIComponent(email); // Codifica l'email e aggiungila all'URL
+        window.location.href = url; // Redirect alla pagina con l'email nel query string
       }
     </script>
 {% endblock %}
