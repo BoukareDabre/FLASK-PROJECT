@@ -1,4 +1,4 @@
-import json, os, random
+import json, os, random, json
 from flask import Flask, request, render_template, redirect
 
 template_dir = os.path.abspath('./Templates')
@@ -251,6 +251,63 @@ def luogo_cinema():
 def registration():
     tipo = request.args.get('tipo')
     return render_template('registration.html',tipo=tipo)
+
+@app.route('/user', methods=['POST'])
+def user():
+    tipo = request.args.get('tipo')
+    user = None
+
+    if(tipo == "S"):
+
+        with open(DB_utenti, "r") as file:
+            users = json.load(file)
+
+        new_user = {
+            "id_user": users[-1]["id_user"] + 1 if users else 1,
+            "name_user": request.form.get('name'),
+            "mail": request.form.get('email'),
+            "password": request.form.get('password'),
+            "phone_number": request.form.get('phone'),
+            "Profileimage_url": "https://example.com/buba.jpg", 
+            "reservations": ["Reservation1", "Reservation2"], 
+            "role": "user"            
+        }
+
+
+        users.append(new_user)
+
+        with open(DB_utenti, "w") as file:
+            json.dump(users, file, indent=4)
+
+        user = new_user
+
+    else:
+        with open(DB_utenti, "r") as file:
+            users = json.load(file)
+
+        name = request.form.get('name')
+        email = request.form.get('email')
+        password = request.form.get('password')
+
+        old_user = None
+        for u in users:
+            is_name_match = u["name_user"] == name
+            is_email_match = u["mail"] == email
+            is_password_match = u["password"] == password
+            
+            if is_name_match and is_email_match and is_password_match:
+                old_user = u
+                break
+
+        if old_user:
+            print(f"Utente trovato: {old_user}")
+            user = old_user
+        else:
+            print("Utente non trovato o credenziali errate.")
+            return render_template('registration.html', tipo="L",error="Invalid credentials.")
+        
+    return render_template('account.html', user=user)
+
 
 
 

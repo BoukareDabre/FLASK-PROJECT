@@ -9,9 +9,9 @@
         <div class="card">
           <img src="{{ url_for('static', filename='img/user-profile.png') }}" class="card-img-top" alt="User Profile" style="width:100%; height:250px;">
           <div class="card-body">
-            <h5 class="card-title">Benvenuto, {{ user_name }}</h5>
-            <p class="card-text">Email: {{ user_email }}</p>
-            <p class="card-text">Membro dal: {{ user_since }}</p>
+            <h5 class="card-title">Benvenuto, {{ user.name_user }}</h5>
+            <p class="card-text">Email: {{ user.mail }}</p>
+            <p class="card-text">Membro dal: {{ user.user_since }}</p>
             <a href="/logout" class="btn btn-danger">Logout</a>
           </div>
         </div>
