@@ -261,7 +261,6 @@ def user():
 
         with open(DB_utenti, "r") as file:
             users = json.load(file)
-            print(f"Utenti caricati: {users}") 
 
         new_user = {
             "id_user": users[-1]["id_user"] + 1 if users else 1,
@@ -274,7 +273,6 @@ def user():
             "role": "user"            
         }
 
-        print(f"Nuovo utente: {new_user}")
 
         users.append(new_user)
 
@@ -282,6 +280,31 @@ def user():
             json.dump(users, file, indent=4)
 
         user = new_user
+
+    else:
+        with open(DB_utenti, "r") as file:
+            users = json.load(file)
+
+        name = request.form.get('name')
+        email = request.form.get('email')
+        password = request.form.get('password')
+
+        old_user = None
+        for u in users:
+            is_name_match = u["name_user"] == name
+            is_email_match = u["mail"] == email
+            is_password_match = u["password"] == password
+            
+            if is_name_match and is_email_match and is_password_match:
+                old_user = u
+                break
+
+        if old_user:
+            print(f"Utente trovato: {old_user}")
+            user = old_user
+        else:
+            print("Utente non trovato o credenziali errate.")
+            return render_template('registration.html', tipo="L",error="Invalid credentials.")
         
     return render_template('account.html', user=user)
 
