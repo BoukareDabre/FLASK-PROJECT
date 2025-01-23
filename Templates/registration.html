@@ -59,7 +59,7 @@
 
   </style>
     <div class="container " style="width: 25%; border: 3px solid #040404 ; border-radius: 5px; background-color: #ffffff; padding-bottom: 1%;color: black;margin-bottom: 5%;">
-        <form class="mt-2" action="login.html">
+        <form class="mt-2" action="/user?tipo={{tipo}}" method="POST">
           <h2 style="text-align: center;">{% if tipo == "S" %}Sign in{% else %}Login{% endif %}</h2>
             <div class="mb-3 ">
               
