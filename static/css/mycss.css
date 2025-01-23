@@ -97,4 +97,43 @@
     padding: 10px;
     border-radius: 5px;
   }
+  
+  @media (max-width: 1440px) {
+    #logo{
+      width: 10%;
+    }
+    #animazione{
+      margin-left: -0%;
+    }
+    #animazione li{
+      font-size: 25px;
+    }
+    .separatore{
+      width: 0.1px;
+      background-color:#495057;
+      height: 70px;
+      margin: 0 15px;
+      margin-top: 5px;
+    }
+    .navbar-nav{
+      margin-top: 2%;
+      float: left;
+    }
+    #log{
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      margin-right: 0;
+    }
+    .navbar-collapse{
+      width: 100%;
+    }
+    #log ul{
+      display: flex;
+      flex-direction: column;
+    }
+    #imgs-inizio{
+      display: none;
+    }
+  }
 

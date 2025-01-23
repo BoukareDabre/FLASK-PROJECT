@@ -1,15 +1,7 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sing in page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
+{% extends "Index.html" %}   
+  {% block title %}About Us - Cinemania{% endblock %}
+  {% block content %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/mycss.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/css-carosel-interattivo.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/splide.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/css-carosel-3img.css') }}">
   </head>
   <style>
     
@@ -22,9 +14,7 @@
        
     }
     .hr{
-     
       top: 33.5%;
-      
     }
     .i{
         position: absolute;
@@ -62,29 +52,6 @@
     
 
   </style>
-  <body>
-    <div class="navbar navbar-expand-sm bg-dark mb-5 border-bottom border-body"  data-bs-theme="dark" >
-        <div class="container-fluid">
-          <div class="navbar-brand" href="#">
-            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo" width="90" height="90" >
-          </div>
-          
-          
-          <div class="collapse navbar-collapse text-center" id="animazione">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link " href="../HOME.html">Film</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Story</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Place</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
     <div class="container " style="width: 25%; border: 3px solid #040404 ; border-radius: 5px; background-color: #ffffff; padding-bottom: 1%;color: black;margin-bottom: 5%;">
         <form class="mt-2" action="login.html">
             <h2 style="text-align: center;">Sign in</h2>
@@ -134,72 +101,7 @@
 
     </div>
 
-    <hr>
-
-    <div style="clear: both;">
-      
-      <div class="nav justify-content-center bg-dark pt-5">
-        
-        <img src="{{ url_for('static', filename='img/icone/cinema_1655698.png') }}" alt="cinema_logo" width="300" height="300" style="margin-right: 80px;">
-        
-        <table class="table table-dark" style="width:60%; float: right;">
-          <thead>
-            <tr>
-              <td>Events and Festivals</td>
-              <td>EXPERIENCES</td>  
-              <td>Code of Conduct</td>  
-            </tr>
-          </thead>
-    
-          <tbody>
-            <tr>
-              <td class="fs-10"> 
-                <p>Screenings</p>
-                <p>Events and Festivals</p>
-                <p>Subscriptions and Memberships</p>
-                <p>Rates</p>
-                <p>Halls</p>
-              </td>  
-              <td>
-                <p>Screenings</p>
-                <p>Events and Festivals</p>
-                <p>Subscriptions and Memberships</p>
-                <p>Rates</p>
-                <p>Halls</p>
-              </td>  
-              <td>
-                <p>Screenings</p>
-                <p>Events and Festivals</p>
-                <p>Subscriptions and Memberships</p>
-                <p>Rates</p>
-                <p>Halls</p>
-              </td>  
-            </tr>
-    
-            <tr>
-              <td colspan="2" align="end">
-                Follow us on 
-              </td>
-              <td>
-                <img src="{{ url_for('static', filename='img/social/FACEBOOK-ICON.png') }}" alt="Facebook" sizes="30" srcset="" width="30">
-                <img src="{{ url_for('static', filename='img/social/instagram.png') }}" alt="Instagram" sizes="30" srcset="" width="30">
-                <img src="{{ url_for('static', filename='img/social/twitter.png') }}" alt="Twitter" sizes="30" srcset="" width="30">
-                <img src="{{ url_for('static', filename='img/social/WHATSAPP-ICON.png') }}" alt="WhatsApp" sizes="30" srcset="" width="30">
-
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        
-      </div>
-      <div class="navbar justify-content-center text-bg-dark p-3">
-        <hr style="color: blue;">
-        <h5 class="fw-semibold">©Copyright 2019 - Designed by Pro World Studio - Consortium of Casalma Cinema Owners - VAT 01390690194</h5>
-      </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
-
+    {% endblock %}
 
   <script>
     document.querySelector("form").addEventListener("submit", controlli);
